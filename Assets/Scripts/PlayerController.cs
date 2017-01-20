@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
-	public float 				moveSpeed 		= 6;							// how fast the player moves
+	public float 				moveSpeed 		= 6;	// how fast the player moves
+	public GameObject			cane;					// Granny's Cane
+	public CeilingController	ceiling;
 
 	private Vector3 			velocity;
 	private float				currentSpeed;
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate() {		
 		// Move the player around
-		velocity 	 = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, Input.GetAxisRaw ("Vertical")).normalized * moveSpeed;
+		velocity 	 = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, 0).normalized * moveSpeed;
 		rigidbody.MovePosition (rigidbody.position + velocity * Time.fixedDeltaTime);
 
 		if (Input.GetAxisRaw ("Horizontal") == -1){
@@ -31,6 +33,13 @@ public class PlayerController : MonoBehaviour {
 		} else if ( Input.GetAxisRaw ("Horizontal") == 1 ) {
 			spriteRenderer.flipX = false;
 		};
+
+		// hit with cane god damnit
+		if ( Input.GetAxisRaw ("Vertical") == 1){
+			//cane.transform. = cane.transform.y + 2;
+			ceiling.goGoGadgetoWave( transform.position.x, 1, 7, 2000 );
+			Debug.Log (transform.position.x);
+		}
 	}
 
 	void OnTriggerEnter(Collider trigger) {

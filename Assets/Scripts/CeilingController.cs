@@ -64,7 +64,7 @@ public class CeilingController : MonoBehaviour
                     var originalPos = tile.transform.position;
                     var positionToEpiCenter = tile.transform.position.x - wave.epiCenter;
                     var newY = wave.getTransformForTile(tile.transform.position.x, timeMSec);
-                    tile.transform.position = transform.position + new Vector3(originalPos.x, newY, originalPos.y);
+                    tile.transform.position = transform.position + new Vector3(originalPos.x, newY, originalPos.z);
                 }
             }
         }

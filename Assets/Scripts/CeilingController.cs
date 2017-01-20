@@ -37,7 +37,7 @@ public class CeilingController : MonoBehaviour
         for (int i = 0; i < NumberOfTiles; i++)
         {
             var newPositionX = (i - half) * size;
-            var newTile = Instantiate(CeilingTilePrefab, new Vector3(newPositionX, 0, 0), Quaternion.identity, transform);
+            var newTile = Instantiate(CeilingTilePrefab, transform.position + new Vector3(newPositionX, 0, 0), Quaternion.identity, transform);
             ceiling.Add(newTile);
         }
     }

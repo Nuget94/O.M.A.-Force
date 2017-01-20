@@ -21,9 +21,9 @@ public class CeilingController : MonoBehaviour
 		buildCeiling();
     }
 
-    public void goGoGadgetoWave(float epiCenter, float initialIntensity, float reach, long durationMSec, float startTimeMSec)
+    public void goGoGadgetoWave(float epiCenter, float initialIntensity, float reach, long durationMSec)
     {
-        Wave w = new Wave(epiCenter, initialIntensity, reach, durationMSec, startTimeMSec);
+        Wave w = new Wave(epiCenter, initialIntensity, reach, durationMSec, Time.fixedTime);
         waves.Add(w);
     }
 
@@ -64,7 +64,7 @@ public class CeilingController : MonoBehaviour
                     var originalPos = tile.transform.position;
                     var positionToEpiCenter = tile.transform.position.x - wave.epiCenter;
                     var newY = wave.getTransformForTile(tile.transform.position.x, timeMSec);
-                    tile.transform.position = new Vector3(originalPos.x, newY, originalPos.y);
+                    tile.transform.position = transform.position + new Vector3(originalPos.x, newY, originalPos.y);
                 }
             }
         }

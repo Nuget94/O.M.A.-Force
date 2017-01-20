@@ -8,6 +8,9 @@ public class CeilingController : MonoBehaviour
 {
     public int NumberOfTiles = 21;
     public GameObject CeilingTilePrefab = null;
+    public long WaveDurationMSec = 1000;
+    public float WaveReach = 5.5f;
+    public float WaveInitialIntensity = 1f;
     
     private List<GameObject> ceiling = new List<GameObject>();
     private List<Wave> waves = new List<Wave>();
@@ -16,12 +19,12 @@ public class CeilingController : MonoBehaviour
     void Start ()
     {
 		buildCeiling();
-        Wave w1 = new Wave();
-        w1.durationMSec = 10000;
-        w1.initialIntensity = 1.0f;
-        w1.startTimeMSec = Time.fixedTime;
-        w1.reach = 5.75f;
-        waves.Add(w1);
+    }
+
+    public void goGoGadgetoWave(float epiCenter, float initialIntensity, float reach, long durationMSec, float startTimeMSec)
+    {
+        Wave w = new Wave(epiCenter, initialIntensity, reach, durationMSec, startTimeMSec);
+        waves.Add(w);
     }
 
     private void buildCeiling()

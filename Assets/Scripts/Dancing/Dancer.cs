@@ -67,7 +67,10 @@ public class Dancer : MonoBehaviour
 {
     public Choreography choreography;
     private Boolean isGrounded = false;
+    public float minDelayBeforeWalkOut = 1.5f;
+    public float maxDelayBeforeWalkOut = 3.7f;
     private float groundedSince = 0.0f;
+    private float walkOutTime = 0.0f;
 	private Animator spriteAnim;
 
     public float jumpInterval = 1000;
@@ -119,7 +122,10 @@ public class Dancer : MonoBehaviour
         {
             isGrounded = true;
             groundedSince = Time.fixedTime;
-            spriteAnim.SetInteger("State", 0);
+            if (!isDead)
+            {
+                spriteAnim.SetInteger("State", 0);
+            }
         }
         if (collisionInfo.transform.tag == "Ceiling")
         {
@@ -132,23 +138,30 @@ public class Dancer : MonoBehaviour
         if (collisionInfo.transform.tag == "Dance Floor")
         {
             isGrounded = false;
-            spriteAnim.SetInteger("State", 1);
+            if (!isDead)
+            {
+                spriteAnim.SetInteger("State", 1);
+            }
         }
     }
 
     void Die()
     {
-        isDead = true;
-        this.GetComponent<Rigidbody2D>().angularDrag = 0;
-        GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
-		spriteAnim.SetInteger("State", 2);
+        if (!isDead)
+        {
+            isDead = true;
+            walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);
+            this.GetComponent<Rigidbody2D>().angularDrag = 0;
+            GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
+            spriteAnim.SetInteger("State", 2);
+        }
     }
-
 
 
     void FixedUpdate()
     {
-        var isWalking = gameObject.GetComponent<Walker>().isActiveAndEnabled;
+        var walker = gameObject.GetComponent<Walker>();
+        var isWalking = walker.isActiveAndEnabled;
         if (isGrounded && !isDead && !isWalking)
         {
             var elapsedTime = Time.fixedTime - groundedSince;
@@ -163,11 +176,15 @@ public class Dancer : MonoBehaviour
             }
         }
 
-       
-
         if (((this.transform.localEulerAngles.z < 360 - maxAngle && this.transform.localEulerAngles.z > 90) || (this.transform.localEulerAngles.z > maxAngle && this.transform.localEulerAngles.z < 270)) && isGrounded)
         {
             Die();
+        }
+
+        if (isDead && Time.fixedTime > walkOutTime)
+        {
+            transform.rotation = Quaternion.identity;
+            walker.enabled = true;
         }
 
     }

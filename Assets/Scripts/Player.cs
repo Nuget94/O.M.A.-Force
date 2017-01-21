@@ -71,6 +71,9 @@ public class Player : MonoBehaviour
                     case 2:
                         Attack3();
                         break;
+                    case 3:
+                        Attack4();
+                        break;
                 }
             }
             
@@ -80,7 +83,7 @@ public class Player : MonoBehaviour
 
     private void Attack1()
     {
-        granny.attack();
+        granny.Attack();
         timeWait = Time.realtimeSinceStartup + cooldownAttack1 / 1000;
         Rigidbody2D[] bodies = gameObject.transform.GetChild(0).GetComponentsInChildren<Rigidbody2D>();
         foreach (Rigidbody2D body in bodies)
@@ -91,7 +94,7 @@ public class Player : MonoBehaviour
 
     private void Attack2()
     {
-        granny.attack();
+        granny.Attack();
         timeWait = Time.realtimeSinceStartup + cooldownAttack2 / 1000;
         gameObject.transform.GetChild((1)).localPosition = new Vector3(0, 0, 0);
         gameObject.transform.GetChild((1)).GetChild(0).localPosition = new Vector3(0, 0, 0);
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour
 
     private void Attack3()
     {
-        granny.attack();
+        granny.Attack();
         timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
         gameObject.transform.GetChild((2)).localPosition = new Vector3(0,0,0);
         gameObject.transform.GetChild((2)).GetChild(0).localPosition = new Vector3(0,0,0);
@@ -114,5 +117,21 @@ public class Player : MonoBehaviour
         gameObject.transform.GetChild((2)).GetChild(1).GetComponent<Rigidbody2D>().angularVelocity = 0;
         gameObject.transform.GetChild((2)).GetChild(1).GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceAttack3/3, forceAttack3));
     }
+
+    private void Attack4()
+    {
+        granny.Attack();
+        timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
+        gameObject.transform.GetChild(3).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild(3).GetChild(0).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild(3).GetChild(1).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().angularVelocity = 0;
+        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(forceAttack3 / 3, forceAttack3));
+        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().angularVelocity = 0;
+        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceAttack3 / 3, forceAttack3));
+    }
+
 
 }

@@ -5,9 +5,14 @@ using UnityEngine;
 public class Broom : MonoBehaviour
 {
 
-    public float force = 100;
-    public float cooldown = 100;
-	public GrannyController granny;
+    public float forceAttack1 = 100;
+    public float forceAttack2 = 100;
+    public float forceAttack3 = 100;
+    public float cooldownAttack1 = 100;
+    public float cooldownAttack2 = 100;
+    public float cooldownAttack3 = 100;
+    public GrannyController granny;
+    public int attackNumber = 0;
 
     private  float timeWait = 0;
 	// Use this for initialization
@@ -39,15 +44,55 @@ public class Broom : MonoBehaviour
         {
             if (this.gameObject.transform.position.y <= -1.0f && timeWait < Time.realtimeSinceStartup)
             {
-                timeWait = Time.realtimeSinceStartup + cooldown/1000;
-                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
-				granny.attack ();
+                switch (attackNumber)
+                {
+                    case 0:
+                        Attack1();
+                        break;
+                    case 1:
+                        Attack2();
+                        break;
+                    case 2:
+                        Attack3();
+                        break;
+                }
             }
             
         }
-
-
-
-
+        
     }
+
+    private void Attack1()
+    {
+        granny.attack();
+        timeWait = Time.realtimeSinceStartup + cooldownAttack1 / 1000;
+        gameObject.transform.GetChild((0)).GetComponent<Rigidbody2D>().AddForce(new Vector2(0, forceAttack1));
+    }
+
+    private void Attack2()
+    {
+        granny.attack();
+        timeWait = Time.realtimeSinceStartup + cooldownAttack2 / 1000;
+        gameObject.transform.GetChild((1)).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild((1)).GetChild(0).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild((1)).GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        gameObject.transform.GetChild((1)).GetChild(0).GetComponent<Rigidbody2D>().angularVelocity = 0;
+        gameObject.transform.GetChild((1)).GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(0, forceAttack3));
+    }
+
+    private void Attack3()
+    {
+        granny.attack();
+        timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
+        gameObject.transform.GetChild((2)).localPosition = new Vector3(0,0,0);
+        gameObject.transform.GetChild((2)).GetChild(0).localPosition = new Vector3(0,0,0);
+        gameObject.transform.GetChild((2)).GetChild(1).localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.GetChild((2)).GetChild(0).GetComponent<Rigidbody2D>().velocity= new Vector2(0,0);
+        gameObject.transform.GetChild((2)).GetChild(0).GetComponent<Rigidbody2D>().angularVelocity = 0;
+        gameObject.transform.GetChild((2)).GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(forceAttack3/3, forceAttack3));
+        gameObject.transform.GetChild((2)).GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        gameObject.transform.GetChild((2)).GetChild(1).GetComponent<Rigidbody2D>().angularVelocity = 0;
+        gameObject.transform.GetChild((2)).GetChild(1).GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceAttack3/3, forceAttack3));
+    }
+
 }

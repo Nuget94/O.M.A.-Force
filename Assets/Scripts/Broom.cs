@@ -6,9 +6,13 @@ public class Broom : MonoBehaviour
 {
 
     public float force = 100;
+    public float cooldown = 100;
+
+    private  float timeWait = 0;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+	    timeWait = Time.realtimeSinceStartup;
 	}
 	
 	// Update is called once per frame
@@ -32,7 +36,12 @@ public class Broom : MonoBehaviour
 
         if (Input.GetKey("space"))
         {
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
+            if (this.gameObject.transform.position.y <= -1.0f && timeWait < Time.realtimeSinceStartup)
+            {
+                timeWait = Time.realtimeSinceStartup + cooldown/1000;
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
+            }
+            
         }
 
 

@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2deb9bb7be8bb9b4e8c3cf96e0821f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jump: {x: -20, y: 400}
+  Jump: {x: -1000, y: 4000}

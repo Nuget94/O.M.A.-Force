@@ -16,12 +16,13 @@ public class GrannyController : MonoBehaviour {
 		
 	}
 
-	public void attack(){
+	public void Attack()
+    {
 		anim.SetInteger ("State", 1);
-		StartCoroutine( attackDone() );
+		StartCoroutine( AttackDone() );
 	}
 
-	IEnumerator attackDone()
+	IEnumerator AttackDone()
 	{
 		yield return new WaitForSeconds(0.5f);
 		anim.SetInteger ("State", 0);

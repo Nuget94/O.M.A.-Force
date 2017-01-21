@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -149,7 +149,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &14610929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -265,7 +265,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -291,7 +291,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &19781929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ Transform:
   m_GameObject: {fileID: 30038660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 505669941}
   m_RootOrder: 0
@@ -471,7 +471,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -497,7 +497,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &56354465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -664,7 +664,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &60363352
 Rigidbody2D:
   serializedVersion: 4
@@ -676,7 +676,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -755,7 +755,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -781,7 +781,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &126878933
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -897,7 +897,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -923,7 +923,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &136024963
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1090,7 +1090,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &153162135
 Rigidbody2D:
   serializedVersion: 4
@@ -1102,7 +1102,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -1149,93 +1149,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153162130}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &153778024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1845994523421272, guid: af598171c96d41b4e8af25df9e202534,
-    type: 2}
-  m_PrefabInternal: {fileID: 1539165530}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 153778027}
-  - component: {fileID: 153778026}
-  - component: {fileID: 153778025}
-  - component: {fileID: 1784304523}
-  m_Layer: 0
-  m_Name: granny
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &153778025
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95434762497553022, guid: af598171c96d41b4e8af25df9e202534,
-    type: 2}
-  m_PrefabInternal: {fileID: 1539165530}
-  m_GameObject: {fileID: 153778024}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: da37e59d2134cbd45891b7ee3639b5b5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &153778026
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 212797445957455446, guid: af598171c96d41b4e8af25df9e202534,
-    type: 2}
-  m_PrefabInternal: {fileID: 1539165530}
-  m_GameObject: {fileID: 153778024}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 549d71322008528448f16a31a9b20d4c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &153778027
+--- !u!4 &153778027 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4480475706055428, guid: af598171c96d41b4e8af25df9e202534,
     type: 2}
   m_PrefabInternal: {fileID: 1539165530}
-  m_GameObject: {fileID: 153778024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.54, y: -2.65, z: -0.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192716024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1237,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &192716029
 Rigidbody2D:
   serializedVersion: 4
@@ -1331,7 +1249,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -1507,7 +1425,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &211001196
 Rigidbody2D:
   serializedVersion: 4
@@ -1519,7 +1437,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -1575,6 +1493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240586200}
   - component: {fileID: 240586201}
+  - component: {fileID: 240586202}
   m_Layer: 9
   m_Name: Sphere 0
   m_TagString: Untagged
@@ -1590,7 +1509,7 @@ Transform:
   m_GameObject: {fileID: 240586199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 0
@@ -1609,6 +1528,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &240586202
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240586199}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &299731228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1695,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &308999618
 Rigidbody2D:
   serializedVersion: 4
@@ -1768,7 +1707,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -1847,7 +1786,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -1873,7 +1812,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &359573948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2092,7 +2031,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2118,7 +2057,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &424983523
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2234,7 +2173,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2260,7 +2199,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &434026161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2376,7 +2315,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2402,7 +2341,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &448195281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2518,7 +2457,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2544,7 +2483,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &459137941
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2711,7 +2650,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &474572843
 Rigidbody2D:
   serializedVersion: 4
@@ -2723,7 +2662,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2831,7 +2770,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -2857,7 +2796,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &518363773
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2941,6 +2880,96 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.005, y: 1.005}
+--- !u!1 &536315673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 536315674}
+  - component: {fileID: 536315677}
+  - component: {fileID: 536315676}
+  - component: {fileID: 536315675}
+  m_Layer: 9
+  m_Name: Sphere right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536315674
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536315673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1080044049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!234 &536315675
+SliderJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536315673}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -8.745144, y: -1}
+  m_AutoConfigureAngle: 1
+  m_Angle: -180
+  m_UseMotor: 1
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_TranslationLimits:
+    m_LowerTranslation: 0
+    m_UpperTranslation: 0
+--- !u!50 &536315676
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536315673}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &536315677
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536315673}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &566962614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,7 +3053,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &566962619
 Rigidbody2D:
   serializedVersion: 4
@@ -3036,7 +3065,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3115,7 +3144,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3141,7 +3170,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &595823886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3308,7 +3337,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &604198415
 Rigidbody2D:
   serializedVersion: 4
@@ -3320,7 +3349,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3392,7 +3421,7 @@ Transform:
   m_GameObject: {fileID: 650192698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485445737}
   m_RootOrder: 0
@@ -3597,7 +3626,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &680191767
 Rigidbody2D:
   serializedVersion: 4
@@ -3609,7 +3638,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3739,7 +3768,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &691345694
 Rigidbody2D:
   serializedVersion: 4
@@ -3751,7 +3780,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3830,7 +3859,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -3856,7 +3885,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &693734604
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4032,9 +4061,6 @@ GameObject:
   m_Component:
   - component: {fileID: 760007634}
   - component: {fileID: 760007633}
-  - component: {fileID: 760007631}
-  - component: {fileID: 760007635}
-  - component: {fileID: 760007632}
   - component: {fileID: 760007630}
   m_Layer: 9
   m_Name: Player
@@ -4054,65 +4080,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf0dd56aaf977243beb82f5c1f9ecbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceAttack1: 10000
-  forceAttack2: 10000
-  forceAttack3: 10000
+  forceAttack1: 40000
+  forceAttack2: 30000
+  forceAttack3: 30000
   cooldownAttack1: 1000
   cooldownAttack2: 1000
   cooldownAttack3: 1000
   granny: {fileID: 1784304523}
   attackNumber: 0
---- !u!23 &760007631
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760007629}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!50 &760007632
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760007629}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  grannyTransform: {fileID: 153778027}
 --- !u!33 &760007633
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4128,28 +4104,15 @@ Transform:
   m_GameObject: {fileID: 760007629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.37, y: -2, z: 0}
-  m_LocalScale: {x: 0.11604799, y: 3.017606, z: 0.11604798}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 851556469}
   - {fileID: 505669941}
   - {fileID: 1485445737}
+  - {fileID: 1080044049}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &760007635
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760007629}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.99999994}
 --- !u!1 &764926974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,7 +4196,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &764926979
 Rigidbody2D:
   serializedVersion: 4
@@ -4245,7 +4208,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -4375,7 +4338,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &777943437
 Rigidbody2D:
   serializedVersion: 4
@@ -4387,7 +4350,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -4517,7 +4480,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &788141944
 Rigidbody2D:
   serializedVersion: 4
@@ -4529,7 +4492,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -4659,7 +4622,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &822449774
 Rigidbody2D:
   serializedVersion: 4
@@ -4671,7 +4634,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -4801,7 +4764,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &825706212
 Rigidbody2D:
   serializedVersion: 4
@@ -4813,7 +4776,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -4943,7 +4906,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &843924218
 Rigidbody2D:
   serializedVersion: 4
@@ -4955,7 +4918,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5010,7 +4973,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 851556469}
-  - component: {fileID: 851556470}
   m_Layer: 9
   m_Name: Stomp
   m_TagString: Untagged
@@ -5038,26 +5000,6 @@ Transform:
   m_Father: {fileID: 760007634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &851556470
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851556468}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &857601522
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,7 +5083,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &857601527
 Rigidbody2D:
   serializedVersion: 4
@@ -5153,7 +5095,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5283,7 +5225,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &858880121
 Rigidbody2D:
   serializedVersion: 4
@@ -5295,7 +5237,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5425,7 +5367,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &860034136
 Rigidbody2D:
   serializedVersion: 4
@@ -5437,7 +5379,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5567,7 +5509,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &863307001
 Rigidbody2D:
   serializedVersion: 4
@@ -5579,7 +5521,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5767,7 +5709,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -5793,7 +5735,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &882100843
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5960,7 +5902,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &922367645
 Rigidbody2D:
   serializedVersion: 4
@@ -5972,7 +5914,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6102,7 +6044,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &925676991
 Rigidbody2D:
   serializedVersion: 4
@@ -6114,7 +6056,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6244,7 +6186,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &943440248
 Rigidbody2D:
   serializedVersion: 4
@@ -6256,7 +6198,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6335,7 +6277,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6361,7 +6303,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &952380161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6509,7 +6451,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &955598382
 Rigidbody2D:
   serializedVersion: 4
@@ -6521,7 +6463,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6579,8 +6521,6 @@ GameObject:
   - component: {fileID: 1051653739}
   - component: {fileID: 1051653738}
   - component: {fileID: 1051653737}
-  - component: {fileID: 1051653736}
-  - component: {fileID: 1051653735}
   m_Layer: 12
   m_Name: Wall left 2
   m_TagString: Untagged
@@ -6588,44 +6528,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!232 &1051653735
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1051653734}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1657305980}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 2.7799997
-  m_MaxDistanceOnly: 0
---- !u!50 &1051653736
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1051653734}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &1051653737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6723,7 +6625,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -6749,7 +6651,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1074487920
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6833,6 +6735,36 @@ BoxCollider2D:
   m_Offset: {x: -0.00000047683716, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.005, y: 1.005}
+--- !u!1 &1080044048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1080044049}
+  m_Layer: 9
+  m_Name: True Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080044049
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080044048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_Children:
+  - {fileID: 536315674}
+  - {fileID: 1195879294}
+  m_Father: {fileID: 760007634}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105490080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,8 +6776,6 @@ GameObject:
   - component: {fileID: 1105490083}
   - component: {fileID: 1105490082}
   - component: {fileID: 1105490081}
-  - component: {fileID: 1105490086}
-  - component: {fileID: 1105490085}
   m_Layer: 12
   m_Name: Wall left
   m_TagString: Untagged
@@ -6918,44 +6848,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!232 &1105490085
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1105490080}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1657305980}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.07999992
-  m_MaxDistanceOnly: 0
---- !u!50 &1105490086
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1105490080}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1148793070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,7 +6931,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1148793075
 Rigidbody2D:
   serializedVersion: 4
@@ -7051,7 +6943,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7181,7 +7073,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1166601503
 Rigidbody2D:
   serializedVersion: 4
@@ -7193,7 +7085,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7323,7 +7215,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1184612389
 Rigidbody2D:
   serializedVersion: 4
@@ -7335,7 +7227,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7465,7 +7357,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1187108458
 Rigidbody2D:
   serializedVersion: 4
@@ -7477,7 +7369,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7524,6 +7416,96 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187108453}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1195879293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1195879294}
+  - component: {fileID: 1195879297}
+  - component: {fileID: 1195879296}
+  - component: {fileID: 1195879295}
+  m_Layer: 9
+  m_Name: Sphere left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195879294
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195879293}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.2, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1080044049}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!234 &1195879295
+SliderJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195879293}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 12.035898, y: -1}
+  m_AutoConfigureAngle: 1
+  m_Angle: 22.074423
+  m_UseMotor: 1
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_TranslationLimits:
+    m_LowerTranslation: 0
+    m_UpperTranslation: 0
+--- !u!50 &1195879296
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195879293}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1195879297
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1195879293}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1313920381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7607,7 +7589,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1313920386
 Rigidbody2D:
   serializedVersion: 4
@@ -7619,7 +7601,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7749,7 +7731,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1318060424
 Rigidbody2D:
   serializedVersion: 4
@@ -7761,7 +7743,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7840,7 +7822,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -7866,7 +7848,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1334065558
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8033,7 +8015,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1381636910
 Rigidbody2D:
   serializedVersion: 4
@@ -8045,7 +8027,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -8101,6 +8083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427973880}
   - component: {fileID: 1427973881}
+  - component: {fileID: 1427973882}
   m_Layer: 9
   m_Name: Sphere -3
   m_TagString: Untagged
@@ -8115,8 +8098,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1427973879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 3
@@ -8135,6 +8118,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1427973882
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1427973879}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1433417844
 GameObject:
   m_ObjectHideFlags: 0
@@ -8218,7 +8221,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1433417849
 Rigidbody2D:
   serializedVersion: 4
@@ -8230,7 +8233,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -8286,6 +8289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1437433666}
   - component: {fileID: 1437433667}
+  - component: {fileID: 1437433668}
   m_Layer: 9
   m_Name: Sphere -1
   m_TagString: Untagged
@@ -8300,8 +8304,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1437433665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 1
@@ -8320,6 +8324,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1437433668
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437433665}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1485445736
 GameObject:
   m_ObjectHideFlags: 0
@@ -8328,7 +8352,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1485445737}
-  - component: {fileID: 1485445738}
   m_Layer: 9
   m_Name: Wave
   m_TagString: Untagged
@@ -8351,26 +8374,6 @@ Transform:
   m_Father: {fileID: 760007634}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1485445738
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1485445736}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1501213437
 GameObject:
   m_ObjectHideFlags: 0
@@ -8537,7 +8540,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1502235450
 Rigidbody2D:
   serializedVersion: 4
@@ -8549,7 +8552,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -8725,7 +8728,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af598171c96d41b4e8af25df9e202534, type: 2}
-  m_RootGameObject: {fileID: 153778024}
   m_IsPrefabParent: 0
 --- !u!1 &1543011336
 GameObject:
@@ -8810,7 +8812,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1543011341
 Rigidbody2D:
   serializedVersion: 4
@@ -8822,7 +8824,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -8901,7 +8903,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -8927,7 +8929,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1614860918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9094,7 +9096,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1618207526
 Rigidbody2D:
   serializedVersion: 4
@@ -9106,7 +9108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9236,7 +9238,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1629344877
 Rigidbody2D:
   serializedVersion: 4
@@ -9248,7 +9250,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9304,6 +9306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644798385}
   - component: {fileID: 1644798386}
+  - component: {fileID: 1644798387}
   m_Layer: 9
   m_Name: Sphere +1
   m_TagString: Untagged
@@ -9318,8 +9321,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1644798384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 4
@@ -9338,6 +9341,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1644798387
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644798384}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1657305979
 GameObject:
   m_ObjectHideFlags: 0
@@ -9370,7 +9393,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9396,7 +9419,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1657305982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9470,7 +9493,7 @@ DistanceJoint2D:
   m_GameObject: {fileID: 1657305979}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 1
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 359573946}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -9563,7 +9586,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1660571269
 Rigidbody2D:
   serializedVersion: 4
@@ -9575,7 +9598,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9654,7 +9677,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9680,7 +9703,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1664010454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9847,7 +9870,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1674997457
 Rigidbody2D:
   serializedVersion: 4
@@ -9859,7 +9882,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9938,7 +9961,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -9964,7 +9987,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1710129103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10131,7 +10154,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1741050206
 Rigidbody2D:
   serializedVersion: 4
@@ -10143,7 +10166,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -10222,7 +10245,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -10248,7 +10271,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1765204169
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10458,7 +10481,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1779754965
 Rigidbody2D:
   serializedVersion: 4
@@ -10470,7 +10493,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -10517,18 +10540,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779754960}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1784304523
+--- !u!114 &1784304523 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114765507284302650, guid: af598171c96d41b4e8af25df9e202534,
     type: 2}
   m_PrefabInternal: {fileID: 1539165530}
-  m_GameObject: {fileID: 153778024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85b9c5b0eb7177a4c858ab0c7529147d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1825909004
 GameObject:
   m_ObjectHideFlags: 0
@@ -10612,7 +10629,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1825909009
 Rigidbody2D:
   serializedVersion: 4
@@ -10624,7 +10641,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -10680,6 +10697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876312040}
   - component: {fileID: 1876312041}
+  - component: {fileID: 1876312042}
   m_Layer: 9
   m_Name: Sphere +2
   m_TagString: Untagged
@@ -10694,8 +10712,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1876312039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 5
@@ -10714,6 +10732,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1876312042
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876312039}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1884516799
 GameObject:
   m_ObjectHideFlags: 0
@@ -10880,7 +10918,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1922931393
 Rigidbody2D:
   serializedVersion: 4
@@ -10892,7 +10930,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11109,7 +11147,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1948073593
 Rigidbody2D:
   serializedVersion: 4
@@ -11121,7 +11159,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11200,7 +11238,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11226,7 +11264,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &1966990426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11393,7 +11431,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1967473168
 Rigidbody2D:
   serializedVersion: 4
@@ -11405,7 +11443,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11535,7 +11573,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &1981608082
 Rigidbody2D:
   serializedVersion: 4
@@ -11547,7 +11585,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11603,6 +11641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015606401}
   - component: {fileID: 2015606402}
+  - component: {fileID: 2015606403}
   m_Layer: 9
   m_Name: Sphere +3
   m_TagString: Untagged
@@ -11617,8 +11656,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015606400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 6
@@ -11637,6 +11676,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &2015606403
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015606400}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &2031123645
 GameObject:
   m_ObjectHideFlags: 0
@@ -11720,7 +11779,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2031123650
 Rigidbody2D:
   serializedVersion: 4
@@ -11732,7 +11791,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -11788,6 +11847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2050361798}
   - component: {fileID: 2050361799}
+  - component: {fileID: 2050361800}
   m_Layer: 9
   m_Name: Sphere -2
   m_TagString: Untagged
@@ -11802,8 +11862,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2050361797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 851556469}
   m_RootOrder: 2
@@ -11822,6 +11882,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &2050361800
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050361797}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &2052891980
 GameObject:
   m_ObjectHideFlags: 0
@@ -11847,7 +11927,7 @@ Transform:
   m_GameObject: {fileID: 2052891980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000173, y: 1.0000012, z: 1.0000174}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485445737}
   m_RootOrder: 1
@@ -11969,7 +12049,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2054672677
 Rigidbody2D:
   serializedVersion: 4
@@ -11981,7 +12061,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12111,7 +12191,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2057241226
 Rigidbody2D:
   serializedVersion: 4
@@ -12123,7 +12203,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12253,7 +12333,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2088888714
 Rigidbody2D:
   serializedVersion: 4
@@ -12265,7 +12345,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12395,7 +12475,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2099742469
 Rigidbody2D:
   serializedVersion: 4
@@ -12407,7 +12487,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12537,7 +12617,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!50 &2125383844
 Rigidbody2D:
   serializedVersion: 4
@@ -12549,7 +12629,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12628,7 +12708,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 3
@@ -12654,7 +12734,7 @@ TargetJoint2D:
   m_AutoConfigureTarget: 1
   m_MaxForce: 1000000
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 3
 --- !u!23 &2133909750
 MeshRenderer:
   m_ObjectHideFlags: 0

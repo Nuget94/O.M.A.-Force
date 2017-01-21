@@ -119,6 +119,7 @@ public class Dancer : MonoBehaviour
         {
             isGrounded = true;
             groundedSince = Time.fixedTime;
+            spriteAnim.SetInteger("State", 0);
         }
         if (collisionInfo.transform.tag == "Ceiling")
         {
@@ -131,6 +132,7 @@ public class Dancer : MonoBehaviour
         if (collisionInfo.transform.tag == "Dance Floor")
         {
             isGrounded = false;
+            spriteAnim.SetInteger("State", 1);
         }
     }
 
@@ -139,7 +141,7 @@ public class Dancer : MonoBehaviour
         isDead = true;
         this.GetComponent<Rigidbody2D>().angularDrag = 0;
         GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
-		spriteAnim.SetBool ("IsDead", true);
+		spriteAnim.SetInteger("State", 2);
     }
 
 

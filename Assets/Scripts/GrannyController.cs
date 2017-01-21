@@ -18,7 +18,8 @@ public class GrannyController : MonoBehaviour {
 
 	public void Attack()
     {
-		anim.SetInteger ("State", 1);
+        gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+        anim.SetInteger ("State", 1);
 		StartCoroutine( AttackDone() );
 	}
 

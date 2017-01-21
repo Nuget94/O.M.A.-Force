@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PartyGuestController : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class PartyGuestController : MonoBehaviour
     public List<DanceMoveList> AvailableMoves = new List<DanceMoveList>();
 
     private float timeOfNextSpawn = 4f;
+    private Boolean cheerSoundScheduled = false;
 
     private int countActiveDancers()
     {
@@ -73,5 +76,32 @@ public class PartyGuestController : MonoBehaviour
             spawnExternal();
             timeOfNextSpawn = Time.fixedTime + Random.Range(3f, 6f);
         }
+
+        checkCheerSound();
+    }
+
+    void checkCheerSound()
+    {
+        if (cheerSoundScheduled) return;
+        if (countActiveDancers() >= maxGuests * 0.8f)
+        {
+            StartCoroutine(ScheduleCheer());
+        }
+    }
+
+    IEnumerator ScheduleCheer()
+    {
+        cheerSoundScheduled = true;
+        var cheerDelay = Random.Range(3f, 5f);
+        var audios = gameObject.GetComponentInChildren<Cheers>().gameObject.GetComponents<AudioSource>();
+        var idxToPlay = Random.Range(0, audios.Length);
+        var audioToPlay = audios[idxToPlay];
+        audioToPlay.PlayDelayed(cheerDelay);
+        yield return new WaitForSeconds(cheerDelay);
+        var bgMusic = gameObject.GetComponentInChildren<BackgroundMusic>().GetComponent<AudioSource>();
+        bgMusic.volume -= 0.2f;
+        yield return new WaitForSeconds(7.5f);
+        cheerSoundScheduled = false;
+        bgMusic.volume += 0.2f;
     }
 }

@@ -11,6 +11,11 @@ public class Scoring : MonoBehaviour
 
 	public GameObject PrefabText = null;
 
+    public void guestStuck()
+    {
+        // TODO more points for guests you catapulted so hard they got stuck
+    }
+
     public void guestLeft()
     {
         score += scoreForLeavingGuest;

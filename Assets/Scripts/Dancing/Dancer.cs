@@ -152,6 +152,7 @@ public class Dancer : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
+            FindObjectOfType<GrannyController>().happyVoices.playRandom();
             walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);
             this.GetComponent<Rigidbody2D>().angularDrag = 0;
             GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
@@ -181,6 +182,13 @@ public class Dancer : MonoBehaviour
         if (((this.transform.localEulerAngles.z < 360 - maxAngle && this.transform.localEulerAngles.z > 90) || (this.transform.localEulerAngles.z > maxAngle && this.transform.localEulerAngles.z < 270)) && isGrounded)
         {
             Die();
+        }
+
+        if (isDead && Time.fixedTime > walkOutTime + 10.0f && !walker.isActiveAndEnabled)
+        {
+            // Actor is likely stuck, 10s past its scheduled walkout time. Just destroy it.
+            Destroy(gameObject);
+            FindObjectOfType<Scoring>().guestStuck();
         }
     }
 

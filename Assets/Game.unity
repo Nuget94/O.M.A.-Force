@@ -12293,7 +12293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 100
+  sideJumpForce: 10
   bpm: 120
+  beatDelay: 15
 --- !u!1 &2050361797
 GameObject:
   m_ObjectHideFlags: 0

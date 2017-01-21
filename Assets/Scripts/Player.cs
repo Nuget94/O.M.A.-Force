@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private bool startAttack4 = false;
     private Transform startPosition;
-    private Transform endPosition;
+
 
 
     private  float timeWait = 0;
@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
         leftSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
 
         startPosition = leftSphere.transform;
-        endPosition = startPosition;
+
 
         startAttack4 = true;
 

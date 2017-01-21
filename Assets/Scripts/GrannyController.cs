@@ -16,9 +16,20 @@ public class GrannyController : MonoBehaviour {
 		
 	}
 
+    void FixedUpdate()
+    {
+        var grannyVoices = gameObject.GetComponentInChildren<SoundCollection>();
+        if (!grannyVoices.isPlaying)
+        {
+            StartCoroutine(Grumble());
+        }
+    }
+
 	public void Attack()
     {
         gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+        var grannyVoices = gameObject.GetComponentInChildren<SoundCollection>();
+        grannyVoices.playRandom();
         anim.SetInteger ("State", 1);
 		StartCoroutine( AttackDone() );
 	}
@@ -28,4 +39,11 @@ public class GrannyController : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		anim.SetInteger ("State", 0);
 	}
+
+    IEnumerator Grumble()
+    {
+        yield return new WaitForSeconds(Random.Range(3f, 9f));
+        var grannyVoices = gameObject.GetComponentInChildren<SoundCollection>();
+        grannyVoices.playRandom();
+    }
 }

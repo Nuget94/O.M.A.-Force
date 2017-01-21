@@ -93,10 +93,8 @@ public class PartyGuestController : MonoBehaviour
     {
         cheerSoundScheduled = true;
         var cheerDelay = Random.Range(3f, 5f);
-        var audios = gameObject.GetComponentInChildren<Cheers>().gameObject.GetComponents<AudioSource>();
-        var idxToPlay = Random.Range(0, audios.Length);
-        var audioToPlay = audios[idxToPlay];
-        audioToPlay.PlayDelayed(cheerDelay);
+        var soundCollection = gameObject.GetComponentInChildren<SoundCollection>();
+        soundCollection.playRandomDelayed(cheerDelay);
         yield return new WaitForSeconds(cheerDelay);
         var bgMusic = gameObject.GetComponentInChildren<BackgroundMusic>().GetComponent<AudioSource>();
         bgMusic.volume -= 0.2f;

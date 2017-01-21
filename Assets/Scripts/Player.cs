@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         {
             if (this.gameObject.transform.position.x >= -6.3f)
             {
-                grannyTransform.Translate(new Vector3(-0.1f, 0, 0));
+                //grannyTransform.Translate(new Vector3(-0.1f, 0, 0));
                 this.gameObject.transform.Translate(new Vector3(-0.1f,0,0));
             }
         }
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             if (this.gameObject.transform.position.x <= 7.5f)
             {
-                grannyTransform.Translate(new Vector3(0.1f, 0, 0));
+                //grannyTransform.Translate(new Vector3(0.1f, 0, 0));
                 this.gameObject.transform.Translate(new Vector3(0.1f, 0, 0));
             }
         }
@@ -133,12 +133,12 @@ public class Player : MonoBehaviour
     private void Attack4()
     {
         granny.Attack();
-        timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
+        timeWait = Time.realtimeSinceStartup + cooldownAttack4 / 1000;
         GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
         GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
         GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
 
-
+        
         trueWave.transform.localPosition = new Vector3(0, 0, 0);
 
         //left Sphere
@@ -150,8 +150,11 @@ public class Player : MonoBehaviour
         leftSphere.transform.localPosition = new Vector3(0, 0, 0);
         leftSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         leftSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
-        
 
+        startPosition = leftSphere.transform;
+        endPosition = startPosition;
+
+        startAttack4 = true;
 
     }
 
@@ -161,20 +164,19 @@ public class Player : MonoBehaviour
     {
         if (startAttack4)
         {
-            timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
             GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
             GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
             GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
 
 
-            leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position,
-                new Vector3(leftSphere.transform.position.x, leftSphere.transform.position.y + 0.35f), cooldownAttack4 / 4);
-            leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position,
-                new Vector3(leftSphere.transform.position.x - 10, leftSphere.transform.position.y), cooldownAttack4 / 4 * 3);
-            rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position,
-                new Vector3(rightSphere.transform.position.x, rightSphere.transform.position.y + 0.35f), cooldownAttack4 / 4);
-            rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position,
-                new Vector3(rightSphere.transform.position.x + 10, rightSphere.transform.position.y), cooldownAttack4 / 4 * 3);
+            leftSphere.transform.position = Vector3.Lerp(startPosition.position ,
+                new Vector3(startPosition.position.x, startPosition.position.y + 0.35f), cooldownAttack4 / 4);
+            leftSphere.transform.position = Vector3.Lerp(startPosition.position,
+                new Vector3(startPosition.position.x - 5, startPosition.position.y), cooldownAttack4 / 4 * 3);
+            rightSphere.transform.position = Vector3.Lerp(startPosition.position,
+                new Vector3(startPosition.position.x, startPosition.position.y + 0.35f), cooldownAttack4 / 4);
+            rightSphere.transform.position = Vector3.Lerp(startPosition.position,
+                new Vector3(startPosition.position.x + 5, startPosition.position.y), cooldownAttack4 / 4 * 3);
         }
 
     }

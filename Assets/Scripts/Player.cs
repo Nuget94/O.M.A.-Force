@@ -22,8 +22,10 @@ public class Player : MonoBehaviour
     public Vector3 endPositionState1;
     public Vector3 endPositionState2Left;
     public Vector3 endPositionState2Right;
-    private int stateAttack4 = 0; // 0 = aus 1 = auf dem Weg nach oben 2 auf dem weg nach links / rechts
-
+    public int stateAttack4 = 0; // 0 = aus 1 = auf dem Weg nach oben 2 auf dem weg nach links / rechts
+    private float startTime;
+    private float journeyLenght1;
+    private float journeyLenght2;
 
 
     private  float timeWait = 0;
@@ -142,22 +144,22 @@ public class Player : MonoBehaviour
         GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
 
         
-        trueWave.transform.localPosition = new Vector3(0, 0, 0);
+        trueWave.transform.position = new Vector3(0, 0, 0);
 
         //left Sphere
-        rightSphere.transform.localPosition = new Vector3(0, 0, 0);
-        rightSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        rightSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
+        rightSphere.transform.position = new Vector3(0, 0, 0);
+
 
         //right Sphere
-        leftSphere.transform.localPosition = new Vector3(0, 0, 0);
-        leftSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        leftSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
+        leftSphere.transform.position = new Vector3(0, 0, 0);
 
-        endPositionState1 = new Vector3(leftSphere.transform.position.x, leftSphere.transform.position.y + 0.15f);
-        endPositionState2Left = new Vector3(leftSphere.transform.position.x - 5, leftSphere.transform.position.y + 0.15f);
-        endPositionState2Right = new Vector3(leftSphere.transform.position.x + 5, leftSphere.transform.position.y + 0.15f);
+        endPositionState1 = new Vector3(leftSphere.transform.position.x, leftSphere.transform.position.y - 0.65f);
+        endPositionState2Left = new Vector3(leftSphere.transform.position.x - 5, leftSphere.transform.position.y - 0.65f);
+        endPositionState2Right = new Vector3(leftSphere.transform.position.x + 5, leftSphere.transform.position.y -0.65f);
 
+        startTime = Time.time;
+        journeyLenght1 = Vector3.Distance(leftSphere.transform.position, endPositionState1);
+        journeyLenght2 = Vector3.Distance(leftSphere.transform.position, endPositionState2Left);
         stateAttack4 = 1;
         startAttack4 = true;
 
@@ -184,6 +186,10 @@ public class Player : MonoBehaviour
                     float xVectorRight = 0;
                     float yVectorRight = 0;
 
+                    leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState1,(Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
+                    rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState1, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
+                    /*
+
                     if (leftSphere.transform.position.x < endPositionState1.x )
                     {
                         xVectorLeft = 0.1f;
@@ -201,9 +207,9 @@ public class Player : MonoBehaviour
                         yVectorRight = 0.1f;
                     }
                     
-                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft);
-                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight);
-                    if ((leftSphere.transform.position.x > endPositionState1.x)&& (leftSphere.transform.position.y > endPositionState1.y)&& (rightSphere.transform.position.x > endPositionState1.x)&& (rightSphere.transform.position.y > endPositionState1.y))
+                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
+                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
+                    if (Vector3.Distance(leftSphere.transform.position , endPositionState1) <= 0.05 && Vector3.Distance(rightSphere.transform.position,endPositionState1)<= 0.05)
                     {
                         stateAttack4 = 2;
                     }
@@ -216,6 +222,10 @@ public class Player : MonoBehaviour
                     xVectorRight = 0;
                     yVectorRight = 0;
 
+                    leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState2Left, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
+                    rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState2Right, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
+
+                    /*
                     if (leftSphere.transform.position.x < endPositionState1.x)
                     {
                         xVectorLeft = 0.1f;
@@ -233,9 +243,9 @@ public class Player : MonoBehaviour
                         yVectorRight = 0.1f;
                     }
 
-                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft);
-                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight);
-                    if ((leftSphere.transform.position.x > endPositionState2Left.x) && (leftSphere.transform.position.y > endPositionState2Left.y) && (rightSphere.transform.position.x > endPositionState2Right.x) && (rightSphere.transform.position.y > endPositionState2Right.y))
+                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
+                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
+                    if (Vector3.Distance(leftSphere.transform.position, endPositionState2Left) <= 0.05 && Vector3.Distance(rightSphere.transform.position, endPositionState2Right) <= 0.05)
                     {
                         stateAttack4 = 0;
                     }
@@ -244,6 +254,7 @@ public class Player : MonoBehaviour
             }
             
         }
+
 
     }
 

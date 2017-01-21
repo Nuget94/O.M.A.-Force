@@ -17,9 +17,8 @@ public class PartyGuestController : MonoBehaviour
 	    for (int i = 0; i < NumGuests; i++)
 	    {
 	        var newDancer = Instantiate(PrefabDancer, transform);
-            var newPos = Random.Range(0, SpawnRange * 0.5f) - SpawnRange;
-            Debug.Log("Spawn Pos " + newPos);
-	        var danceType = (int) Mathf.Floor(Random.Range(0, AvailableMoves.Count));
+            var newPos = Random.Range(SpawnRange * -0.5f, SpawnRange * 0.5f);
+	        int danceType = Random.Range(0, AvailableMoves.Count);
             DanceMoveAndTime moveAndTime = new DanceMoveAndTime();
 	        moveAndTime.Wait = 0.0f;
 	        moveAndTime.DanceMove = AvailableMoves[danceType];

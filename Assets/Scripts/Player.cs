@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Broom : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
-    public float forceAttack1 = 100;
-    public float forceAttack2 = 100;
-    public float forceAttack3 = 100;
-    public float cooldownAttack1 = 100;
-    public float cooldownAttack2 = 100;
-    public float cooldownAttack3 = 100;
+    public float forceAttack1 = 10000;
+    public float forceAttack2 = 10000;
+    public float forceAttack3 = 10000;
+    public float cooldownAttack1 = 1000;
+    public float cooldownAttack2 = 1000;
+    public float cooldownAttack3 = 1000;
     public GrannyController granny;
     public int attackNumber = 0;
 
@@ -38,6 +38,19 @@ public class Broom : MonoBehaviour
             {
                 this.gameObject.transform.Translate(new Vector3(0.1f, 0, 0));
             }
+        }
+
+        if (Input.GetKey("1"))
+        {
+            attackNumber = 0;
+        }
+        if (Input.GetKey("2"))
+        {
+            attackNumber = 1;
+        }
+        if (Input.GetKey("3"))
+        {
+            attackNumber = 2;
         }
 
         if (Input.GetKey("space"))

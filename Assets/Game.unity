@@ -9131,7 +9131,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 05cc4aeb85cbc9e408e849ca9da7d4df, type: 3}
   - {fileID: 8300000, guid: 2e6e3cebec62f5f4988d257b65645c1a, type: 3}
   - {fileID: 8300000, guid: 90dde0d0a364bf84fba88d06a1f25de8, type: 3}
-  - {fileID: 8300000, guid: 735578279a2d86145b3e28bfc9e75b9c, type: 3}
   isPlaying: 0
 --- !u!1 &1334065555
 GameObject:
@@ -14220,10 +14219,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39cd1d3ca27f20a42b9c198c45e1d8bc, type: 3}
   - {fileID: 8300000, guid: 178b2c16c21654c4fb2b29143637a328, type: 3}
   - {fileID: 8300000, guid: e28655b2ee5c5054da03227524944b72, type: 3}
-  - {fileID: 8300000, guid: b505824e3c83f6e4b9fc357b1bdb9ac3, type: 3}
-  - {fileID: 8300000, guid: 5cb0d090c5439c14887c48e321e07b20, type: 3}
-  - {fileID: 8300000, guid: d2bdaeb112266dc4695440e304cf597b, type: 3}
-  - {fileID: 8300000, guid: 6de80a3f8ed1adf4094593844efe025b, type: 3}
   isPlaying: 0
 --- !u!82 &2046908832
 AudioSource:

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float cooldownAttack3 = 1000;
     public GrannyController granny;
     public int attackNumber = 0;
+    public Transform grannyTransform;
 
     private  float timeWait = 0;
 	// Use this for initialization
@@ -26,16 +27,18 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("left"))
         {
-            if (this.gameObject.transform.position.x >= -9)
+            if (this.gameObject.transform.position.x >= -6.3f)
             {
+                grannyTransform.Translate(new Vector3(-0.1f, 0, 0));
                 this.gameObject.transform.Translate(new Vector3(-0.1f,0,0));
             }
         }
 
         if (Input.GetKey("right"))
         {
-            if (this.gameObject.transform.position.x <= 13.2f)
+            if (this.gameObject.transform.position.x <= 7.5f)
             {
+                grannyTransform.Translate(new Vector3(0.1f, 0, 0));
                 this.gameObject.transform.Translate(new Vector3(0.1f, 0, 0));
             }
         }
@@ -79,7 +82,11 @@ public class Player : MonoBehaviour
     {
         granny.attack();
         timeWait = Time.realtimeSinceStartup + cooldownAttack1 / 1000;
-        gameObject.transform.GetChild((0)).GetComponent<Rigidbody2D>().AddForce(new Vector2(0, forceAttack1));
+        Rigidbody2D[] bodies = gameObject.transform.GetChild(0).GetComponentsInChildren<Rigidbody2D>();
+        foreach (Rigidbody2D body in bodies)
+        {
+            body.AddForce(new Vector2(0, forceAttack1));
+        }
     }
 
     private void Attack2()

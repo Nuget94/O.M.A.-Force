@@ -79,7 +79,16 @@ public class Dancer : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
+        setupRigidBody();
+    }
+
+    public void setupRigidBody()
+    {
+        var rigidBody = GetComponent<Rigidbody2D>();
+        if (rigidBody != null)
+        {
+            GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
+        }
     }
 	
 	// Update is called once per frame
@@ -128,7 +137,8 @@ public class Dancer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isGrounded && !isDead)
+        var isWalking = gameObject.GetComponent<Walker>().isActiveAndEnabled;
+        if (isGrounded && !isDead && !isWalking)
         {
             var elapsedTime = Time.fixedTime - groundedSince;
             var nextMove = choreography.nextMove();

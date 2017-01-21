@@ -11,7 +11,7 @@ public class PartyGuestController : MonoBehaviour
     public float SpawnRange = 8;
     public GameObject externalSpawnPoint = null;
     public int maxGuests = 5;
-    public Dancer PrefabDancer = null;
+    public List<Dancer> PrefabDancers = new List<Dancer>();
 
     public List<DanceMoveList> AvailableMoves = new List<DanceMoveList>();
 
@@ -40,7 +40,9 @@ public class PartyGuestController : MonoBehaviour
             return;
         }
 
-        var newDancer = Instantiate(PrefabDancer, transform);
+        var prefabIdx = Random.Range(0, PrefabDancers.Count);
+        var prefab = PrefabDancers[prefabIdx];
+        var newDancer = Instantiate(prefab, transform);
         var walker = newDancer.GetComponent<Walker>();
         walker.reset(false);
         walker.enabled = true;
@@ -52,7 +54,9 @@ public class PartyGuestController : MonoBehaviour
         
 	    for (int i = 0; i < NumGuests; i++)
 	    {
-	        var newDancer = Instantiate(PrefabDancer, transform);
+            var prefabIdx = Random.Range(0, PrefabDancers.Count);
+            var prefab = PrefabDancers[prefabIdx];
+            var newDancer = Instantiate(prefab, transform);
             var newPos = Random.Range(0, SpawnRange ) - SpawnRange * 0.5f;
 			newDancer.transform.localPosition = new Vector3(newPos, 0, 0);
 			InitializeWithRandomDanceMove(newDancer.GetComponent<Dancer>());

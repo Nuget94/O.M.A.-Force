@@ -1570,8 +1570,11 @@ MonoBehaviour:
   externalSpawnPoint: {fileID: 1777466783122918, guid: f66f04f566156b04f94ac359b8dd6d68,
     type: 2}
   maxGuests: 5
-  PrefabDancer: {fileID: 114696121338260372, guid: 8f37da6bfc557434698214bb897f202a,
-    type: 2}
+  PrefabDancers:
+  - {fileID: 114735260585055980, guid: d0a23849837bf18439165e0e6660fe44, type: 2}
+  - {fileID: 114696121338260372, guid: 8f37da6bfc557434698214bb897f202a, type: 2}
+  - {fileID: 114735260585055980, guid: 883105fbe0b37224abec88d04eef88a8, type: 2}
+  - {fileID: 114735260585055980, guid: ca3782a45a52b1d45808536ccc414db7, type: 2}
   AvailableMoves:
   - {fileID: 114581856450321768, guid: a6ed4e6a7a82e914e9401af1844627d7, type: 2}
 --- !u!4 &202955680
@@ -4143,6 +4146,70 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604198410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &605432380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 605432381}
+  - component: {fileID: 605432383}
+  m_Layer: 0
+  m_Name: TheDarkening(TM)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &605432381
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605432380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12, y: 0.35, z: -1}
+  m_LocalScale: {x: 25.459337, y: 7.0168376, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1366300446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &605432383
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605432380}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 16cd27e58dd22d5438dd3d3bd6568fbf, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.219}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &623927181
 Prefab:
   m_ObjectHideFlags: 0
@@ -9279,6 +9346,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4653925964569440, guid: fa034c05b32474042ae01cc615feab63,
     type: 2}
   m_PrefabInternal: {fileID: 706153566}
+--- !u!1 &1366300445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1366300446}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366300446
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366300445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4029999, y: 2.0370002, z: -1}
+  m_LocalScale: {x: 1, y: 1.025, z: 1}
+  m_Children:
+  - {fileID: 605432381}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1381636905
 GameObject:
   m_ObjectHideFlags: 0

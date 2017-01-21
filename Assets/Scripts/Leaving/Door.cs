@@ -28,13 +28,15 @@ public class Door : MonoBehaviour
         }
         if (doorHastoBeOpen && !doorIsOpen)
         {
+            var doorSprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+            doorSprite.enabled = true;
             doorIsOpen = true;
-            Debug.Log("open door");
         }
         else if (!doorHastoBeOpen && doorIsOpen)
         {
+            var doorSprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+            doorSprite.enabled = false;
             doorIsOpen = false;
-            Debug.Log("close door");
         }
     }
 }

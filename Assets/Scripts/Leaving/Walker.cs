@@ -9,8 +9,21 @@ public class Walker : MonoBehaviour
     public float walkingSpeed = 1.6f;
     public List<GameObject> WayPointsLeave = new List<GameObject>();
     public List<GameObject> WayPointsEnter = new List<GameObject>();
+    public List<GameObject> RoomStartLocations = new List<GameObject>();
 
     private int wayPointIdx = 0;
+
+    public void reset(Boolean isLeaving)
+    {
+        wayPointIdx = 0;
+        this.isLeaving = isLeaving;
+        if (!isLeaving)
+        {
+            // select the location where we start dancing
+            var roomLocation = UnityEngine.Random.Range(0, RoomStartLocations.Count);
+            WayPointsEnter.Add(RoomStartLocations[roomLocation]);
+        }
+    }
 
     void OnEnable()
     {
@@ -72,6 +85,7 @@ public class Walker : MonoBehaviour
     public void exitComplete()
     {
         Destroy(gameObject);
+        FindObjectOfType<Scoring>().guestLeft();
     }
 
     public void enterComplete()

@@ -73,13 +73,10 @@ public class Dancer : MonoBehaviour
     private float walkOutTime = 0.0f;
 	private Animator spriteAnim;
 
-    public float jumpInterval = 1000;
-    public float jumpForce = 200;
     public float maxAngle = 45;
     public bool isDead = false;
     public Vector2 centerOfMass = new Vector2(0, 0f);
-
-
+    
     // Use this for initialization
     void Start ()
     {
@@ -113,6 +110,7 @@ public class Dancer : MonoBehaviour
         if (collisionInfo.transform.tag == "Dance Floor")
         {
             isGrounded = true;
+            checkWalkout();
         }
     }
 
@@ -125,6 +123,10 @@ public class Dancer : MonoBehaviour
             if (!isDead)
             {
                 spriteAnim.SetInteger("State", 0);
+            }
+            else
+            {
+                checkWalkout();
             }
         }
         if (collisionInfo.transform.tag == "Ceiling")
@@ -180,13 +182,20 @@ public class Dancer : MonoBehaviour
         {
             Die();
         }
+    }
+
+    private void checkWalkout()
+    {
+        var walker = gameObject.GetComponent<Walker>();
+        if (walker.isActiveAndEnabled) return;
 
         if (isDead && Time.fixedTime > walkOutTime)
         {
             transform.rotation = Quaternion.identity;
+            transform.position = new Vector3(transform.position.x, 1.6f, transform.position.z);
+            walker.reset(true);
             walker.enabled = true;
         }
-
     }
     
     private void doTheMove(DanceMove danceMove)

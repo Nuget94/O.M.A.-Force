@@ -32,14 +32,14 @@ public class PartyGuestController : MonoBehaviour
 
     void spawnExternal()
     {
-        if (countActiveDancers() >= maxGuests)
+        if (countActiveDancers() >= maxGuests || externalSpawnPoint == null)
         {
             return;
         }
 
         var newDancer = Instantiate(PrefabDancer, transform);
         var walker = newDancer.GetComponent<Walker>();
-        walker.isLeaving = false;
+        walker.reset(false);
         walker.enabled = true;
         newDancer.transform.position = externalSpawnPoint.transform.position;
     }

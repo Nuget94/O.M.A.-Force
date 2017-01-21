@@ -172,7 +172,12 @@ MonoBehaviour:
   - {fileID: 1678214616036746, guid: d382bf408d114b34a9728922743da24d, type: 2}
   - {fileID: 1661144848243412, guid: b93cbe45d580e874db530c8fb8ba9d2d, type: 2}
   - {fileID: 1294825274433956, guid: 2bc45fc378781664b9170648bc82517b, type: 2}
-  - {fileID: 1697618249191316, guid: 13752d4ff3e77884ab5444fa907cb353, type: 2}
+  RoomStartLocations:
+  - {fileID: 1520182882621572, guid: 145b842145d07824ba163cdfb7fc9657, type: 2}
+  - {fileID: 1035322866410644, guid: a0e45a3371b01c742a521ce49411880e, type: 2}
+  - {fileID: 1139648066108362, guid: e54ac2aadd0c64643ad945153e1d2c4a, type: 2}
+  - {fileID: 1233202440927960, guid: 28adbe97665a2f646b14c0e49bdc665d, type: 2}
+  - {fileID: 1166310078333662, guid: 32423af94c1fd5c4a9b38e3491589705, type: 2}
 --- !u!114 &114696121338260372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,6 +194,8 @@ MonoBehaviour:
     - Wait: 0
       DanceMove: {fileID: 114514042245609984, guid: a127d39f69219fa47a39c97c3cbf1110,
         type: 2}
+  minDelayBeforeWalkOut: 1.5
+  maxDelayBeforeWalkOut: 3.7
   jumpInterval: 1000
   jumpForce: 1000
   maxAngle: 70

@@ -9,7 +9,7 @@ public class PartyGuestController : MonoBehaviour
     public float SpawnRange = 8;
     public Dancer PrefabDancer = null;
 
-    public List<DanceMoveList> AvailableMoves = new List<DanceMoveList>();
+    public List<DanceMove> AvailableMoves = new List<DanceMove>();
 
 	// Use this for initialization
 	void Start () {

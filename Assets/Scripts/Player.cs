@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     private bool startAttack4 = false;
     private Transform startPosition;
+    private int stateAttack4 = 0; // 0 = aus 1 = auf dem Weg nach oben 2 auf dem weg nach links / rechts
 
 
 
@@ -153,7 +154,7 @@ public class Player : MonoBehaviour
 
         startPosition = leftSphere.transform;
 
-
+        stateAttack4 = 1;
         startAttack4 = true;
 
     }
@@ -168,6 +169,49 @@ public class Player : MonoBehaviour
             GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
             GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
 
+            switch (stateAttack4)
+            {
+                case 0:
+                    startAttack4 = false;
+                    break;
+                case 1:
+                    float xVectorLeft = 0;
+                    float yVectorLeft = 0;
+                    float xVectorRight = 0;
+                    float yVectorRight = 0;
+
+                    if (leftSphere.transform.position.x < startPosition.transform.position.x )
+                    {
+                        xVectorLeft = 0.1f;
+                    }
+                    if (leftSphere.transform.position.y < startPosition.transform.position.y )
+                    {
+                        yVectorLeft = 0.1f;
+                    }
+                    if (rightSphere.transform.position.x < startPosition.transform.position.x)
+                    {
+                        xVectorRight = 0.1f;
+                    }
+                    if (rightSphere.transform.position.y < startPosition.transform.position.y)
+                    {
+                        yVectorRight = 0.1f;
+                    }
+                    
+                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft);
+                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight);
+                    if ((leftSphere.transform.position.x > startPosition.transform.position.x)&& (leftSphere.transform.position.y > startPosition.transform.position.y)&& (rightSphere.transform.position.x > startPosition.transform.position.x)&& (rightSphere.transform.position.y > startPosition.transform.position.y))
+                    {
+                        stateAttack4 = 2;
+                    }
+                    
+                    break;
+                case 2:
+
+
+
+
+                    break;
+            }
 
             leftSphere.transform.position = Vector3.Lerp(startPosition.position ,
                 new Vector3(startPosition.position.x, startPosition.position.y + 0.35f), cooldownAttack4 / 4);

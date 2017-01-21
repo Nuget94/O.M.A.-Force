@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
     public Transform grannyTransform;
 
     private bool startAttack4 = false;
-    private Transform startPosition;
+    public Vector3 endPositionState1;
+    public Vector3 endPositionState2Left;
+    public Vector3 endPositionState2Right;
     private int stateAttack4 = 0; // 0 = aus 1 = auf dem Weg nach oben 2 auf dem weg nach links / rechts
 
 
@@ -152,7 +154,9 @@ public class Player : MonoBehaviour
         leftSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         leftSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
 
-        startPosition = leftSphere.transform;
+        endPositionState1 = new Vector3(leftSphere.transform.position.x, leftSphere.transform.position.y + 0.15f);
+        endPositionState2Left = new Vector3(leftSphere.transform.position.x - 5, leftSphere.transform.position.y + 0.15f);
+        endPositionState2Right = new Vector3(leftSphere.transform.position.x + 5, leftSphere.transform.position.y + 0.15f);
 
         stateAttack4 = 1;
         startAttack4 = true;
@@ -180,26 +184,26 @@ public class Player : MonoBehaviour
                     float xVectorRight = 0;
                     float yVectorRight = 0;
 
-                    if (leftSphere.transform.position.x < startPosition.transform.position.x )
+                    if (leftSphere.transform.position.x < endPositionState1.x )
                     {
                         xVectorLeft = 0.1f;
                     }
-                    if (leftSphere.transform.position.y < startPosition.transform.position.y )
+                    if (leftSphere.transform.position.y < endPositionState1.y )
                     {
                         yVectorLeft = 0.1f;
                     }
-                    if (rightSphere.transform.position.x < startPosition.transform.position.x)
+                    if (rightSphere.transform.position.x < endPositionState1.x)
                     {
                         xVectorRight = 0.1f;
                     }
-                    if (rightSphere.transform.position.y < startPosition.transform.position.y)
+                    if (rightSphere.transform.position.y < endPositionState1.y)
                     {
                         yVectorRight = 0.1f;
                     }
                     
                     leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft);
                     rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight);
-                    if ((leftSphere.transform.position.x > startPosition.transform.position.x)&& (leftSphere.transform.position.y > startPosition.transform.position.y)&& (rightSphere.transform.position.x > startPosition.transform.position.x)&& (rightSphere.transform.position.y > startPosition.transform.position.y))
+                    if ((leftSphere.transform.position.x > endPositionState1.x)&& (leftSphere.transform.position.y > endPositionState1.y)&& (rightSphere.transform.position.x > endPositionState1.x)&& (rightSphere.transform.position.y > endPositionState1.y))
                     {
                         stateAttack4 = 2;
                     }
@@ -207,20 +211,38 @@ public class Player : MonoBehaviour
                     break;
                 case 2:
 
+                    xVectorLeft = 0;
+                    yVectorLeft = 0;
+                    xVectorRight = 0;
+                    yVectorRight = 0;
 
+                    if (leftSphere.transform.position.x < endPositionState1.x)
+                    {
+                        xVectorLeft = 0.1f;
+                    }
+                    if (leftSphere.transform.position.y < endPositionState1.y)
+                    {
+                        yVectorLeft = 0.1f;
+                    }
+                    if (rightSphere.transform.position.x < endPositionState1.x)
+                    {
+                        xVectorRight = 0.1f;
+                    }
+                    if (rightSphere.transform.position.y < endPositionState1.y)
+                    {
+                        yVectorRight = 0.1f;
+                    }
 
+                    leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft);
+                    rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight);
+                    if ((leftSphere.transform.position.x > endPositionState2Left.x) && (leftSphere.transform.position.y > endPositionState2Left.y) && (rightSphere.transform.position.x > endPositionState2Right.x) && (rightSphere.transform.position.y > endPositionState2Right.y))
+                    {
+                        stateAttack4 = 0;
+                    }
 
                     break;
             }
-
-            leftSphere.transform.position = Vector3.Lerp(startPosition.position ,
-                new Vector3(startPosition.position.x, startPosition.position.y + 0.35f), cooldownAttack4 / 4);
-            leftSphere.transform.position = Vector3.Lerp(startPosition.position,
-                new Vector3(startPosition.position.x - 5, startPosition.position.y), cooldownAttack4 / 4 * 3);
-            rightSphere.transform.position = Vector3.Lerp(startPosition.position,
-                new Vector3(startPosition.position.x, startPosition.position.y + 0.35f), cooldownAttack4 / 4);
-            rightSphere.transform.position = Vector3.Lerp(startPosition.position,
-                new Vector3(startPosition.position.x + 5, startPosition.position.y), cooldownAttack4 / 4 * 3);
+            
         }
 
     }

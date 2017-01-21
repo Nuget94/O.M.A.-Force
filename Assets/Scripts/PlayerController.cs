@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 		// hit with cane god damnit
 		if ( Input.GetAxisRaw ("Vertical") == 1){
 			//cane.transform. = cane.transform.y + 2;
-			ceiling.goGoGadgetoWave( transform.position.x, 1, 7, 2000 );
+			//ceiling.goGoGadgetoWave( transform.position.x, 1, 7, 2000 );
 			Debug.Log (transform.position.x);
 		}
 	}

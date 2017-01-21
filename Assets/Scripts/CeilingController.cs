@@ -8,23 +8,34 @@ public class CeilingController : MonoBehaviour
 {
     public int NumberOfTiles = 21;
     public GameObject CeilingTilePrefab = null;
-    public long WaveDurationMSec = 1000;
     public float WaveReach = 5.5f;
     public float WaveInitialIntensity = 1f;
     
     private List<GameObject> ceiling = new List<GameObject>();
-    private List<Wave> waves = new List<Wave>();
 
     // Use this for initialization
     void Start ()
     {
 		buildCeiling();
+        goGoGadgetoWave(0f, WaveInitialIntensity, WaveReach);
     }
 
-    public void goGoGadgetoWave(float epiCenter, float initialIntensity, float reach, long durationMSec)
+    public void goGoGadgetoWave(float epiCenter, float initialIntensity, float reach)
     {
-        Wave w = new Wave(epiCenter, initialIntensity, reach, durationMSec, Time.fixedTime);
-        waves.Add(w);
+        foreach (var tile in ceiling)
+        {
+            var distanceToEpiCenter = Math.Abs(tile.transform.position.x - epiCenter);
+            var remainingIntensity = interpolateIntensityByDistance(initialIntensity, reach, distanceToEpiCenter);
+            tile.GetComponent<CeilingTile>().hitWithWave(remainingIntensity);
+        }
+        //Wave w = new Wave(epiCenter, initialIntensity, reach, durationMSec, Time.fixedTime);
+        Debug.Log("Wave");
+        //waves.Add(w);
+    }
+
+    private float interpolateIntensityByDistance(float initialIntensity, float reach, float distanceToEpiCenter)
+    {
+        return Mathf.Lerp(initialIntensity, 0, distanceToEpiCenter / reach);
     }
 
     private void buildCeiling()
@@ -37,7 +48,8 @@ public class CeilingController : MonoBehaviour
         for (int i = 0; i < NumberOfTiles; i++)
         {
             var newPositionX = (i - half) * size;
-            var newTile = Instantiate(CeilingTilePrefab, transform.position + new Vector3(newPositionX, 0, 0), Quaternion.identity, transform);
+            var newTile = Instantiate(CeilingTilePrefab, transform.position, Quaternion.identity, transform);
+            newTile.transform.localPosition = new Vector3(newPositionX, 0, 0);
             ceiling.Add(newTile);
         }
     }
@@ -49,25 +61,6 @@ public class CeilingController : MonoBehaviour
 
     void FixedUpdate()
     {
-        var timeMSec = Time.fixedTime * 1000f;
-        var toRemove = new List<Wave>();
-        foreach (var wave in waves)
-        {
-            if (wave.noLongerEffective(timeMSec))
-            {
-                toRemove.Add(wave);
-            }
-            else
-            {
-                foreach (var tile in ceiling)
-                {
-                    var originalPos = tile.transform.position;
-                    var positionToEpiCenter = tile.transform.position.x - wave.epiCenter;
-                    var newY = wave.getTransformForTile(tile.transform.position.x, timeMSec);
-                    tile.transform.position = transform.position + new Vector3(originalPos.x, newY, originalPos.z);
-                }
-            }
-        }
-        waves = waves.Except(toRemove).ToList();
+        
     }
 }

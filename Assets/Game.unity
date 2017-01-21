@@ -3745,7 +3745,7 @@ Transform:
   m_LocalPosition: {x: 1.7674, y: -0.5515002, z: 0}
   m_LocalScale: {x: 0.040000003, y: 0.0625, z: 1}
   m_Children: []
-  m_Father: {fileID: 283141712}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &550020564

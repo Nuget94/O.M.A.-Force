@@ -46,7 +46,7 @@ public class PartyGuestController : MonoBehaviour
         var walker = newDancer.GetComponent<Walker>();
         walker.reset(false);
         walker.enabled = true;
-        newDancer.transform.position = externalSpawnPoint.transform.position;
+        newDancer.transform.position = externalSpawnPoint.transform.position + Vector3.up * walker.walkingHeight;
     }
 
 	// Use this for initialization

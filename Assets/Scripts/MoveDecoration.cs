@@ -7,6 +7,7 @@ public class MoveDecoration : MonoBehaviour
 {
     public float jumpForce = 100;
     public int sideJumpForce = 100;
+    public int jumpAngle = 5;
     public float bpm = 120;
     public float beatDelay = 1;
 
@@ -29,9 +30,9 @@ public class MoveDecoration : MonoBehaviour
 	        Rigidbody2D[] bodies = GetComponentsInChildren<Rigidbody2D>();
 	        foreach (Rigidbody2D body in bodies)
 	        {
-	            int rndmNumber = rndm.Next(0, sideJumpForce * 2) - sideJumpForce;
-                Debug.Log(rndmNumber);
-	            body.AddForce(new Vector2(rndmNumber, jumpForce));
+	            int rndmSideJumpForce = rndm.Next(0, sideJumpForce * 2) - sideJumpForce;
+                body.angularVelocity = rndm.Next(0, jumpAngle * 2) - jumpAngle;
+                body.AddForce(new Vector2(rndmSideJumpForce, jumpForce));
             }
             
 	    }

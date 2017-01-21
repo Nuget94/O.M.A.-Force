@@ -8,12 +8,20 @@ public class Player : MonoBehaviour
     public float forceAttack1 = 10000;
     public float forceAttack2 = 10000;
     public float forceAttack3 = 10000;
+    public float forceAttack4 = 10000;
+
     public float cooldownAttack1 = 1000;
     public float cooldownAttack2 = 1000;
     public float cooldownAttack3 = 1000;
+    public float cooldownAttack4 = 1000;
     public GrannyController granny;
     public int attackNumber = 0;
     public Transform grannyTransform;
+
+    private bool startAttack4 = false;
+    private Transform startPosition;
+    private Transform endPosition;
+
 
     private  float timeWait = 0;
 	// Use this for initialization
@@ -54,6 +62,10 @@ public class Player : MonoBehaviour
         if (Input.GetKey("3"))
         {
             attackNumber = 2;
+        }
+        if (Input.GetKey("4"))
+        {
+            attackNumber = 3;
         }
 
         if (Input.GetKey("space"))
@@ -122,15 +134,49 @@ public class Player : MonoBehaviour
     {
         granny.Attack();
         timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
-        gameObject.transform.GetChild(3).localPosition = new Vector3(0, 0, 0);
-        gameObject.transform.GetChild(3).GetChild(0).localPosition = new Vector3(0, 0, 0);
-        gameObject.transform.GetChild(3).GetChild(1).localPosition = new Vector3(0, 0, 0);
-        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().angularVelocity = 0;
-        gameObject.transform.GetChild(3).GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(forceAttack3 / 3, forceAttack3));
-        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().angularVelocity = 0;
-        gameObject.transform.GetChild(3).GetChild(1).GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceAttack3 / 3, forceAttack3));
+        GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
+        GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
+        GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
+
+
+        trueWave.transform.localPosition = new Vector3(0, 0, 0);
+
+        //left Sphere
+        rightSphere.transform.localPosition = new Vector3(0, 0, 0);
+        rightSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        rightSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
+
+        //right Sphere
+        leftSphere.transform.localPosition = new Vector3(0, 0, 0);
+        leftSphere.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        leftSphere.transform.GetComponent<Rigidbody2D>().angularVelocity = 0;
+        
+
+
+    }
+
+   
+
+    private void FixedUpdate()
+    {
+        if (startAttack4)
+        {
+            timeWait = Time.realtimeSinceStartup + cooldownAttack3 / 1000;
+            GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
+            GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
+            GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
+
+
+            leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position,
+                new Vector3(leftSphere.transform.position.x, leftSphere.transform.position.y + 0.35f), cooldownAttack4 / 4);
+            leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position,
+                new Vector3(leftSphere.transform.position.x - 10, leftSphere.transform.position.y), cooldownAttack4 / 4 * 3);
+            rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position,
+                new Vector3(rightSphere.transform.position.x, rightSphere.transform.position.y + 0.35f), cooldownAttack4 / 4);
+            rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position,
+                new Vector3(rightSphere.transform.position.x + 10, rightSphere.transform.position.y), cooldownAttack4 / 4 * 3);
+        }
+
     }
 
 

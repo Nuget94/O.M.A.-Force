@@ -72,6 +72,7 @@ public class Dancer : MonoBehaviour
     private float groundedSince = 0.0f;
     private float walkOutTime = 0.0f;
 	private Animator spriteAnim;
+    private float leftGroundAt;
 
     public float maxAngle = 45;
     public bool isDead = false;
@@ -140,6 +141,7 @@ public class Dancer : MonoBehaviour
         if (collisionInfo.transform.tag == "Dance Floor")
         {
             isGrounded = false;
+            leftGroundAt = Time.fixedTime;
             if (!isDead)
             {
                 spriteAnim.SetInteger("State", 1);
@@ -184,7 +186,7 @@ public class Dancer : MonoBehaviour
             Die();
         }
 
-        if (isDead && Time.fixedTime > walkOutTime + 10.0f && !walker.isActiveAndEnabled)
+        if (!isGrounded && Time.fixedTime - leftGroundAt > 10.0f && !walker.isActiveAndEnabled)
         {
             // Actor is likely stuck, 10s past its scheduled walkout time. Just destroy it.
             Destroy(gameObject);
@@ -200,7 +202,7 @@ public class Dancer : MonoBehaviour
         if (isDead && Time.fixedTime > walkOutTime)
         {
             transform.rotation = Quaternion.identity;
-            transform.position = new Vector3(transform.position.x, 1.6f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, walker.walkingHeight, transform.position.z);
             walker.reset(true);
             walker.enabled = true;
         }

@@ -6,7 +6,8 @@ using UnityEngine;
 public class Walker : MonoBehaviour
 {
     public Boolean isLeaving = true;
-    public float walkingSpeed = 1.6f;
+    public float walkingSpeed = 4f;
+    public float walkingHeight = 1.6f;
     public List<GameObject> WayPointsLeave = new List<GameObject>();
     public List<GameObject> WayPointsEnter = new List<GameObject>();
     public List<GameObject> RoomStartLocations = new List<GameObject>();
@@ -77,6 +78,7 @@ public class Walker : MonoBehaviour
                 nextWaypoint = WayPointsLeave[wayPointIdx].transform.position;
             }
         }
+        nextWaypoint += Vector3.up * walkingHeight;
         var direction = (nextWaypoint - transform.position).normalized;
         var translation = direction * walkingSpeed * Time.fixedDeltaTime;
         this.transform.position += translation;

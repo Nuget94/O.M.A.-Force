@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    public long score = 0;
-
     public long scoreForLeavingGuest = 100;
 
 	public GameObject PrefabText = null;
@@ -18,8 +16,9 @@ public class Scoring : MonoBehaviour
 
     public void guestLeft()
     {
-        score += scoreForLeavingGuest;
-		gameObject.GetComponent<Text>().text = "Score: " + score;
+		FindObjectOfType<PlayerScorePersistenceManager>().Score.AddScore(scoreForLeavingGuest);
+
+		gameObject.GetComponent<Text>().text = "Score: " + FindObjectOfType<PlayerScorePersistenceManager>().Score.Score;
 
 		GameObject player = GameObject.Find("Player");
 		GameObject uiCanvas = GameObject.Find("UI Canvas");

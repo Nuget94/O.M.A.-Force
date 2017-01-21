@@ -3658,6 +3658,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+<<<<<<< Updated upstream
+=======
 --- !u!1 &543101348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,6 +3724,7 @@ Transform:
   m_Father: {fileID: 283141712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &550020564
 Prefab:
   m_ObjectHideFlags: 0

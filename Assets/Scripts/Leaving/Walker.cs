@@ -20,6 +20,10 @@ public class Walker : MonoBehaviour
         {
             Destroy(rBody);
         }
+        foreach (var collider in gameObject.GetComponents<Collider2D>())
+        {
+            collider.enabled = false;
+        }
     }
 
     public Boolean needsToBeTestedAgainstDoor()

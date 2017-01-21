@@ -185,7 +185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choreography:
-    DanceMoves: []
+    DanceMoves:
+    - Wait: 0
+      DanceMove: {fileID: 114514042245609984, guid: a127d39f69219fa47a39c97c3cbf1110,
+        type: 2}
   jumpInterval: 1000
   jumpForce: 1000
   maxAngle: 70

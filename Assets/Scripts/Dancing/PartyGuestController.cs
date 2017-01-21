@@ -18,14 +18,20 @@ public class PartyGuestController : MonoBehaviour
 	    {
 	        var newDancer = Instantiate(PrefabDancer, transform);
             var newPos = Random.Range(0, SpawnRange ) - SpawnRange * 0.5f;
-            Debug.Log("Spawn Pos " + newPos);
-	        var danceType = (int) Mathf.Floor(Random.Range(0, AvailableMoves.Count));
-            DanceMoveAndTime moveAndTime = new DanceMoveAndTime();
-	        moveAndTime.Wait = 0.0f;
-	        moveAndTime.DanceMove = AvailableMoves[danceType];
-            newDancer.transform.localPosition= new Vector3(newPos, 0, 0);
-            newDancer.GetComponent<Dancer>().choreography.DanceMoves.Add(moveAndTime);
+			newDancer.transform.localPosition = new Vector3(newPos, 0, 0);
+			Debug.Log("Spawn Pos " + newPos);
+			InitializeWithRandomDanceMove(newDancer.GetComponent<Dancer>());
 	    }
+	}
+
+	public void InitializeWithRandomDanceMove(Dancer dancer)
+	{
+		int danceType = Random.Range(0, AvailableMoves.Count);
+		DanceMoveAndTime moveAndTime = new DanceMoveAndTime();
+		moveAndTime.Wait = 0.0f;
+		moveAndTime.DanceMove = AvailableMoves[danceType];
+		dancer.choreography.DanceMoves.Clear();
+		dancer.choreography.DanceMoves.Add(moveAndTime);
 	}
 	
 	// Update is called once per frame

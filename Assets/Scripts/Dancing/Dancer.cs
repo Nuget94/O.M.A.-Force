@@ -81,7 +81,8 @@ public class Dancer : MonoBehaviour
     void Start ()
     {
         setupRigidBody();
-    }
+		spriteAnim = GetComponentInChildren<Animator>();
+	}
 
     public void setupRigidBody()
     {
@@ -89,8 +90,13 @@ public class Dancer : MonoBehaviour
         if (rigidBody != null)
         {
             GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
-		spriteAnim = GetComponentInChildren<Animator> ();
+			GetComponent<Rigidbody2D>().mass = 50;
+			GetComponent<Rigidbody2D>().angularDrag = 6;
         }
+		foreach (var collider in gameObject.GetComponents<Collider2D>())
+		{
+			collider.enabled = true;
+		}
     }
 	
 	// Update is called once per frame

@@ -81,5 +81,7 @@ public class Walker : MonoBehaviour
         
         // need to setup rigisbody here
         this.gameObject.GetComponent<Dancer>().setupRigidBody();
+
+		FindObjectOfType<PartyGuestController>().InitializeWithRandomDanceMove(gameObject.GetComponent<Dancer>());
     }
 }

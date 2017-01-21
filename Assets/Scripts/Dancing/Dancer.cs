@@ -68,6 +68,7 @@ public class Dancer : MonoBehaviour
     public Choreography choreography;
     private Boolean isGrounded = false;
     private float groundedSince = 0.0f;
+	private Animator spriteAnim;
 
     public float jumpInterval = 1000;
     public float jumpForce = 200;
@@ -88,6 +89,7 @@ public class Dancer : MonoBehaviour
         if (rigidBody != null)
         {
             GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
+		spriteAnim = GetComponentInChildren<Animator> ();
         }
     }
 	
@@ -131,6 +133,7 @@ public class Dancer : MonoBehaviour
         isDead = true;
         this.GetComponent<Rigidbody2D>().angularDrag = 0;
         GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
+		spriteAnim.SetBool ("IsDead", true);
     }
 
 

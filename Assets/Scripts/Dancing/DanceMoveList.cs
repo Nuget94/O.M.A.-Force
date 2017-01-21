@@ -31,6 +31,5 @@ public class DanceMoveList : DanceMove
     override public void nextIdx()
     {
         internalIdx += 1;
-        Debug.Log("New internal dance idx is " + internalIdx);
     }
 }

@@ -41,7 +41,6 @@ public class Choreography
             newIdx -= DanceMoves.Count;
         }
         danceMoveIdx = newIdx;
-        Debug.Log("New Dance Idx is " + danceMoveIdx);
     }
 
     public DanceMoveAndTime nextMove()

@@ -7,6 +7,7 @@ public class RaveWave : MonoBehaviour
 
     public float jumpInterval = 1000;
     public float jumpForce = 200;
+    public Vector2 centerOfMass = new Vector2(0,0f);
     private float time;
     public bool isGrounded = false;
 
@@ -14,6 +15,7 @@ public class RaveWave : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
 	    time = Time.realtimeSinceStartup;
 	}
 
@@ -41,7 +43,7 @@ public class RaveWave : MonoBehaviour
     // Update is called once per frame
     void Update () {
         
-	    if ((Time.realtimeSinceStartup > time + jumpInterval/1000) && isGrounded)
+	    if ((Time.realtimeSinceStartup > time + jumpInterval/1000) && isGrounded )
 	    {
 	        time = Time.realtimeSinceStartup;
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));

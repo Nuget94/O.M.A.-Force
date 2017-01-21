@@ -14,23 +14,13 @@ public class Walker : MonoBehaviour
 
     void OnEnable()
     {
-        // we need to disable all physics
+        // we need to disable all physics while walking
         var rBody = gameObject.GetComponent<Rigidbody2D>();
         if (rBody != null)
         {
             Destroy(rBody);
         }
     }
-
-    // Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public Boolean needsToBeTestedAgainstDoor()
     {
@@ -49,7 +39,7 @@ public class Walker : MonoBehaviour
                 wayPointIdx++;
                 if (wayPointIdx >= WayPointsLeave.Count)
                 {
-                    Destroy(gameObject);
+                    exitComplete();
                     return;
                 }
                 nextWaypoint = WayPointsLeave[wayPointIdx].transform.position;
@@ -64,9 +54,7 @@ public class Walker : MonoBehaviour
                 wayPointIdx++;
                 if (wayPointIdx >= WayPointsEnter.Count)
                 {
-                    this.enabled = false;
-                    this.gameObject.AddComponent<Rigidbody2D>();
-                    this.gameObject.GetComponent<Dancer>().setupRigidBody();
+                    enterComplete();
                     return;
                 }
                 nextWaypoint = WayPointsLeave[wayPointIdx].transform.position;
@@ -75,5 +63,19 @@ public class Walker : MonoBehaviour
         var direction = (nextWaypoint - transform.position).normalized;
         var translation = direction * walkingSpeed * Time.fixedDeltaTime;
         this.transform.position += translation;
+    }
+
+    public void exitComplete()
+    {
+        Destroy(gameObject);
+    }
+
+    public void enterComplete()
+    {
+        this.enabled = false;
+        this.gameObject.AddComponent<Rigidbody2D>();
+        
+        // need to setup rigisbody here
+        this.gameObject.GetComponent<Dancer>().setupRigidBody();
     }
 }

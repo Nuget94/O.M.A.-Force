@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212774600664808402}
   - component: {fileID: 95360456605481550}
   m_Layer: 0
-  m_Name: dude2-idle01
+  m_Name: girl2-idle01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 58927060888568180}
   - component: {fileID: 114753427373677812}
   m_Layer: 10
-  m_Name: Rave Dancer2
+  m_Name: Rave Dancer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1799553356896456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.713161, y: -2.6953366, z: 0}
+  m_LocalPosition: {x: 25.394438, y: -2.7233012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4233528087973960}
@@ -114,9 +114,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.03, y: 0.58}
+  m_Offset: {x: 0.04, y: 0.49}
   serializedVersion: 2
-  m_Radius: 0.76
+  m_Radius: 0.85
 --- !u!61 &61939165097582518
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -128,9 +128,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.09, y: -0.64}
+  m_Offset: {x: -0.05, y: -0.76}
   serializedVersion: 2
-  m_Size: {x: 0.87, y: 1.22}
+  m_Size: {x: 0.79, y: 1.04}
 --- !u!95 &95360456605481550
 Animator:
   serializedVersion: 3
@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 1575251817006856}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12e93ba5ec5bbf044ba024addb4f0fd5, type: 2}
+  m_Controller: {fileID: 9100000, guid: eafef9e0fbffade4caaec93a26e176aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -230,7 +230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a5d3058e7ff93f428b6f4159b77e728, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99e77ce9943a38f4eb31387c6cdbe835, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

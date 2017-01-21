@@ -46,11 +46,6 @@ public class Broom : MonoBehaviour
             
         }
 
-		// Reset sprite after attack anim
-		if (timeWait >= Time.realtimeSinceStartup)
-		{
-			//granny.attackDone ();
-		}
 
 
 

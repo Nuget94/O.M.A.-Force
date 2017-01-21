@@ -66,12 +66,20 @@ public class Choreography
 public class Dancer : MonoBehaviour
 {
     public Choreography choreography;
-    private Boolean isGrounded = true;
+    private Boolean isGrounded = false;
     private float groundedSince = 0.0f;
+
+    public float jumpInterval = 1000;
+    public float jumpForce = 200;
+    public float maxAngle = 45;
+    public bool isDead = false;
+    public Vector2 centerOfMass = new Vector2(0, 0f);
+
 
     // Use this for initialization
     void Start ()
     {
+        GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
     }
 	
 	// Update is called once per frame
@@ -81,23 +89,46 @@ public class Dancer : MonoBehaviour
 
     public void OnCollisionStay2D(Collision2D collisionInfo)
     {
-        isGrounded = true;
+
+        if (collisionInfo.transform.tag == "Dance Floor")
+        {
+            isGrounded = true;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        isGrounded = true;
-        groundedSince = Time.fixedTime;
+        if (collisionInfo.transform.tag == "Dance Floor")
+        {
+            isGrounded = true;
+            groundedSince = Time.fixedTime;
+        }
+        if (collisionInfo.transform.tag == "Ceiling")
+        {
+            Die();
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collisionInfo)
     {
-        isGrounded = false;
+        if (collisionInfo.transform.tag == "Dance Floor")
+        {
+            isGrounded = false;
+        }
     }
+
+    void Die()
+    {
+        isDead = true;
+        this.GetComponent<Rigidbody2D>().angularDrag = 0;
+        GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
+    }
+
+
 
     void FixedUpdate()
     {
-        if (isGrounded)
+        if (isGrounded && !isDead)
         {
             var elapsedTime = Time.fixedTime - groundedSince;
             var nextMove = choreography.nextMove();
@@ -110,6 +141,14 @@ public class Dancer : MonoBehaviour
                 groundedSince = Time.fixedTime;
             }
         }
+
+       
+
+        if (((this.transform.localEulerAngles.z < 360 - maxAngle && this.transform.localEulerAngles.z > 90) || (this.transform.localEulerAngles.z > maxAngle && this.transform.localEulerAngles.z < 270)) && isGrounded)
+        {
+            Die();
+        }
+
     }
     
     private void doTheMove(DanceMove danceMove)

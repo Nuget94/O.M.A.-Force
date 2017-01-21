@@ -9,7 +9,7 @@ public class PartyGuestController : MonoBehaviour
     public float SpawnRange = 8;
     public Dancer PrefabDancer = null;
 
-    public List<DanceMove> AvailableMoves = new List<DanceMove>();
+    public List<DanceMoveList> AvailableMoves = new List<DanceMoveList>();
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +17,13 @@ public class PartyGuestController : MonoBehaviour
 	    for (int i = 0; i < NumGuests; i++)
 	    {
 	        var newDancer = Instantiate(PrefabDancer, transform);
-            var newPos = Random.Range(SpawnRange * -0.5f, SpawnRange * 0.5f);
-	        int danceType = Random.Range(0, AvailableMoves.Count);
+            var newPos = Random.Range(0, SpawnRange ) - SpawnRange * 0.5f;
+            Debug.Log("Spawn Pos " + newPos);
+	        var danceType = (int) Mathf.Floor(Random.Range(0, AvailableMoves.Count));
             DanceMoveAndTime moveAndTime = new DanceMoveAndTime();
 	        moveAndTime.Wait = 0.0f;
 	        moveAndTime.DanceMove = AvailableMoves[danceType];
-            newDancer.transform.localPosition = new Vector3(newPos, 0, 0);
+            newDancer.transform.localPosition= new Vector3(newPos, 0, 0);
             newDancer.GetComponent<Dancer>().choreography.DanceMoves.Add(moveAndTime);
 	    }
 	}

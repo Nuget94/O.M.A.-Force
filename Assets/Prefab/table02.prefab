@@ -9,53 +9,53 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1362205797790170}
+  m_RootGameObject: {fileID: 1047627561235930}
   m_IsPrefabParent: 1
---- !u!1 &1362205797790170
+--- !u!1 &1047627561235930
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4561162291804752}
-  - component: {fileID: 212628684180907606}
-  - component: {fileID: 61033128584679972}
-  - component: {fileID: 50435876583904496}
-  - component: {fileID: 61227770025311146}
-  - component: {fileID: 61738800523179694}
+  - component: {fileID: 4320774798063328}
+  - component: {fileID: 212063352623218672}
+  - component: {fileID: 61553184137149314}
+  - component: {fileID: 61330666536768936}
+  - component: {fileID: 61496496737974444}
+  - component: {fileID: 50276027655611502}
   m_Layer: 13
-  m_Name: holidayisland01
+  m_Name: table02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4561162291804752
+--- !u!4 &4320774798063328
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.267, y: 1.405, z: 0}
+  m_LocalPosition: {x: 3.943, y: 0.797, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50435876583904496
+--- !u!50 &50276027655611502
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -64,54 +64,54 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61033128584679972
+--- !u!61 &61330666536768936
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.89}
+  m_Offset: {x: -1.69, y: -0.09}
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 0.7}
---- !u!61 &61227770025311146
+  m_Size: {x: 0.31, y: 1.12}
+--- !u!61 &61496496737974444
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.23, y: 0.42}
+  m_Offset: {x: 1.56, y: -0.09}
   serializedVersion: 2
-  m_Size: {x: 0.58, y: 2.02}
---- !u!61 &61738800523179694
+  m_Size: {x: 0.31, y: 1.12}
+--- !u!61 &61553184137149314
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.2, y: 0.87}
+  m_Offset: {x: -0.09, y: 0.55}
   serializedVersion: 2
-  m_Size: {x: 1.7, y: 0.43}
---- !u!212 &212628684180907606
+  m_Size: {x: 4.16, y: 0.2}
+--- !u!212 &212063352623218672
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362205797790170}
+  m_GameObject: {fileID: 1047627561235930}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2525105be2f0859439c64c6f5cbf0a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98e1d5aa071361e499b23daab14d058b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

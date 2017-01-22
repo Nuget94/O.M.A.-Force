@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114696121338260372}
   - component: {fileID: 58653107306694812}
   - component: {fileID: 114410175214785892}
+  - component: {fileID: 114705855755370120}
   m_Layer: 10
   m_Name: Rave Dancer
   m_TagString: Untagged
@@ -200,6 +201,18 @@ MonoBehaviour:
   maxAngle: 70
   isDead: 0
   centerOfMass: {x: 0, y: -0.25}
+--- !u!114 &114705855755370120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976142975851146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9ed5cf86003ef4ebcef84e6e292f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationStepEulerDegrees: 7
 --- !u!212 &212810875634249820
 SpriteRenderer:
   m_ObjectHideFlags: 1

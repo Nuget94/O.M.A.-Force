@@ -41,8 +41,11 @@ public class Player : MonoBehaviour
 		if (Input.GetAxisRaw("Horizontal") != 0) {
 			float direction = Input.GetAxisRaw("Horizontal") / 10;
 			this.gameObject.transform.Translate (new Vector3 (direction, 0, 0));
-		} else {
-			//granny.GetComponent<Animator> ().SetInteger ("State", 0);
+			granny.GetComponent<Animator> ().SetInteger ("State", 2);
+		}
+
+		if (Input.GetButtonUp("Horizontal")){
+			granny.GetComponent<Animator> ().SetInteger ("State", 0);
 		}
 
         if (Input.GetKey("1"))
@@ -62,7 +65,7 @@ public class Player : MonoBehaviour
             attackNumber = 3;
         }
 
-        if (Input.GetButton("Fire1"))
+		if (Input.GetButton("Fire1") && !Input.GetButton("Horizontal"))
         {
             if (timeWait < Time.realtimeSinceStartup)
             {

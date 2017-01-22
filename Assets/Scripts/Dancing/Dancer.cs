@@ -189,8 +189,8 @@ public class Dancer : MonoBehaviour
         if (!isGrounded && Time.fixedTime - leftGroundAt > 10.0f && !walker.isActiveAndEnabled)
         {
             // Actor is likely stuck, 10s past its scheduled walkout time. Just destroy it.
-            Destroy(gameObject);
-            FindObjectOfType<Scoring>().guestStuck();
+        //    Destroy(gameObject);
+            //FindObjectOfType<Scoring>().guestStuck();
         }
     }
 

@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            if (this.gameObject.transform.position.y <= -1.0f && timeWait < Time.realtimeSinceStartup)
+            if (timeWait < Time.realtimeSinceStartup)
             {
                 switch (attackNumber)
                 {
@@ -81,6 +81,10 @@ public class Player : MonoBehaviour
                         Attack4();
                         break;
                 }
+            }
+            else
+            {
+                Debug.Log(timeWait-Time.realtimeSinceStartup);
             }
             
         }

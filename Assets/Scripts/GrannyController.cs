@@ -7,6 +7,8 @@ public class GrannyController : MonoBehaviour
 
     public SoundCollection happyVoices;
     public SoundCollection angryVoices;
+    public int voiceChance = 30;    //Chance to play the angry sound while attack
+
 
     private Animator anim;
 
@@ -17,8 +19,13 @@ public class GrannyController : MonoBehaviour
 
 	public void Attack()
     {
-        gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
-        angryVoices.playRandom();
+        Debug.Log("Attack start");
+        if (Random.value < voiceChance / 100)
+        {
+            gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+            angryVoices.playRandom();
+        }
+        
         anim.SetInteger ("State", 1);
 		StartCoroutine( AttackDone() );
 	}

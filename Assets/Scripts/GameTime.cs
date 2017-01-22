@@ -19,9 +19,6 @@ public class GameTime : MonoBehaviour {
 
     public void UpdateTime(float leftTime)
     {
-        Debug.Log(leftTime);
-        //int timeLeftInSek = (int)leftTime;
-        //string formatedGameTime = (int) (timeLeftInSek / 60) + ":" + (int)(60/(timeLeftInSek%60));
         string formatedGameTime = string.Format("{0}:{1:00}", (int)leftTime / 60, (int)leftTime % 60); 
         gameObject.GetComponent<Text>().text = "Game Time Left: " + formatedGameTime;
     }

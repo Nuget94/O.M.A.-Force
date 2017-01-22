@@ -821,18 +821,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1845994523421272, guid: af598171c96d41b4e8af25df9e202534,
     type: 2}
   m_PrefabInternal: {fileID: 1539165530}
---- !u!114 &72382711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 72382710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9ed5cf86003ef4ebcef84e6e292f69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationStepEulerDegrees: 10
 --- !u!82 &72382713
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3130,7 +3118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96416302d7902024694215767b74cb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   gameDuration: 300
+=======
+  gameDuration: 30000
+>>>>>>> Stashed changes
   gameTimeText: {fileID: 821205844}
 --- !u!4 &459005786
 Transform:

@@ -38,6 +38,16 @@ public class Walker : MonoBehaviour
         {
             collider.enabled = false;
         }
+
+        var spriteAnim = GetComponentInChildren<Animator>();
+        if (isLeaving)
+        {
+            spriteAnim.SetInteger("State", 5);
+        }
+        else
+        {
+            spriteAnim.SetInteger("State", 3);
+        }
     }
 
     public Boolean needsToBeTestedAgainstDoor()
@@ -97,7 +107,9 @@ public class Walker : MonoBehaviour
         
         // need to setup rigisbody here
         this.gameObject.GetComponent<Dancer>().setupRigidBody();
+        var spriteAnim = GetComponentInChildren<Animator>();
+        spriteAnim.SetInteger("State", 0);
 
-		FindObjectOfType<PartyGuestController>().InitializeWithRandomDanceMove(gameObject.GetComponent<Dancer>());
+        FindObjectOfType<PartyGuestController>().InitializeWithRandomDanceMove(gameObject.GetComponent<Dancer>());
     }
 }

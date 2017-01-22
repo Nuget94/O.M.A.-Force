@@ -12,18 +12,26 @@ public class GameOver : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		startTime = Time.realtimeSinceStartup;
+		Reset();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Time.realtimeSinceStartup > startTime + gameDuration)
-	    {
-	        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-	    }
-	    else
-	    {
-	        gameTimeText.GetComponent<GameTime>().UpdateTime(gameDuration + startTime -Time.realtimeSinceStartup);
-	    }
+		if (FindObjectOfType<GameController>().IsRunning())
+		{
+			if (Time.realtimeSinceStartup > startTime + gameDuration)
+			{
+				SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+			}
+			else
+			{
+				gameTimeText.GetComponent<GameTime>().UpdateTime(gameDuration + startTime - Time.realtimeSinceStartup);
+			}
+		}
+	}
+
+	public void Reset()
+	{
+		startTime = Time.realtimeSinceStartup;
 	}
 }

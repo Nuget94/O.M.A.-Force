@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ceiling
   - Dance Floor
+  - Attack
   layers:
   - Default
   - TransparentFX

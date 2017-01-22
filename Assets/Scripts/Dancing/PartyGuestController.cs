@@ -52,16 +52,19 @@ public class PartyGuestController : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-        
-	    for (int i = 0; i < NumGuests; i++)
-	    {
-            var prefabIdx = Random.Range(0, PrefabDancers.Count);
-            var prefab = PrefabDancers[prefabIdx];
-            var newDancer = Instantiate(prefab, transform);
-            var newPos = Random.Range(0, SpawnRange ) - SpawnRange * 0.5f;
+	}
+
+	public void SpawnInitial()
+	{
+		for (int i = 0; i < NumGuests; i++)
+		{
+			var prefabIdx = Random.Range(0, PrefabDancers.Count);
+			var prefab = PrefabDancers[prefabIdx];
+			var newDancer = Instantiate(prefab, transform);
+			var newPos = Random.Range(0, SpawnRange) - SpawnRange * 0.5f;
 			newDancer.transform.localPosition = new Vector3(newPos, 0, 0);
 			InitializeWithRandomDanceMove(newDancer.GetComponent<Dancer>());
-	    }
+		}
 	}
 
 	public void InitializeWithRandomDanceMove(Dancer dancer)
@@ -76,13 +79,16 @@ public class PartyGuestController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Time.fixedTime > timeOfNextSpawn)
-        {
-            spawnExternal();
-            timeOfNextSpawn = Time.fixedTime + Random.Range(3f, 6f);
-        }
+		if (FindObjectOfType<GameController>().IsRunning())
+		{
+			if (Time.fixedTime > timeOfNextSpawn)
+			{
+				spawnExternal();
+				timeOfNextSpawn = Time.fixedTime + Random.Range(3f, 6f);
+			}
 
-        checkCheerSound();
+			checkCheerSound();
+		}
     }
 
     void checkCheerSound()

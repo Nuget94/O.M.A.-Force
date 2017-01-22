@@ -5341,7 +5341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96416302d7902024694215767b74cb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 30
+  gameDuration: 180
   gameTimeText: {fileID: 821205844}
 --- !u!4 &459005786
 Transform:

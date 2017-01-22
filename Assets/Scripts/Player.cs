@@ -166,98 +166,98 @@ public class Player : MonoBehaviour
     }
 
 
-	private void FixedUpdate()
-	{
-		if (FindObjectOfType<GameController>().IsRunning())
-		{
-			if (startAttack4)
-			{
-				GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
-				GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
-				GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
+	//private void FixedUpdate()
+	//{
+	//	if (FindObjectOfType<GameController>().IsRunning())
+	//	{
+	//		if (startAttack4)
+	//		{
+	//			GameObject trueWave = gameObject.transform.GetChild(3).gameObject;
+	//			GameObject leftSphere = trueWave.transform.GetChild(0).gameObject;
+	//			GameObject rightSphere = trueWave.transform.GetChild(1).gameObject;
 
-				switch (stateAttack4)
-				{
-					case 0:
-						startAttack4 = false;
-						break;
-					case 1:
-						float xVectorLeft = 0;
-						float yVectorLeft = 0;
-						float xVectorRight = 0;
-						float yVectorRight = 0;
+	//			switch (stateAttack4)
+	//			{
+	//				case 0:
+	//					startAttack4 = false;
+	//					break;
+	//				case 1:
+	//					float xVectorLeft = 0;
+	//					float yVectorLeft = 0;
+	//					float xVectorRight = 0;
+	//					float yVectorRight = 0;
 
-						leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState1, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
-						rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState1, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
-						/*
+	//					leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState1, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
+	//					rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState1, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4);
+	//					/*
 
-						if (leftSphere.transform.position.x < endPositionState1.x )
-						{
-							xVectorLeft = 0.1f;
-						}
-						if (leftSphere.transform.position.y < endPositionState1.y )
-						{
-							yVectorLeft = 0.1f;
-						}
-						if (rightSphere.transform.position.x < endPositionState1.x)
-						{
-							xVectorRight = 0.1f;
-						}
-						if (rightSphere.transform.position.y < endPositionState1.y)
-						{
-							yVectorRight = 0.1f;
-						}
+	//					if (leftSphere.transform.position.x < endPositionState1.x )
+	//					{
+	//						xVectorLeft = 0.1f;
+	//					}
+	//					if (leftSphere.transform.position.y < endPositionState1.y )
+	//					{
+	//						yVectorLeft = 0.1f;
+	//					}
+	//					if (rightSphere.transform.position.x < endPositionState1.x)
+	//					{
+	//						xVectorRight = 0.1f;
+	//					}
+	//					if (rightSphere.transform.position.y < endPositionState1.y)
+	//					{
+	//						yVectorRight = 0.1f;
+	//					}
                     
-						leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
-						rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
-						if (Vector3.Distance(leftSphere.transform.position, endPositionState1) <= 0.05 && Vector3.Distance(rightSphere.transform.position, endPositionState1) <= 0.05)
-						{
-							stateAttack4 = 2;
-						}
+	//					leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
+	//					rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
+	//					if (Vector3.Distance(leftSphere.transform.position, endPositionState1) <= 0.05 && Vector3.Distance(rightSphere.transform.position, endPositionState1) <= 0.05)
+	//					{
+	//						stateAttack4 = 2;
+	//					}
 
-						break;
-					case 2:
+	//					break;
+	//				case 2:
 
-						xVectorLeft = 0;
-						yVectorLeft = 0;
-						xVectorRight = 0;
-						yVectorRight = 0;
+	//					xVectorLeft = 0;
+	//					yVectorLeft = 0;
+	//					xVectorRight = 0;
+	//					yVectorRight = 0;
 
-						leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState2Left, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
-						rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState2Right, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
+	//					leftSphere.transform.position = Vector3.Lerp(leftSphere.transform.position, endPositionState2Left, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
+	//					rightSphere.transform.position = Vector3.Lerp(rightSphere.transform.position, endPositionState2Right, (Time.time - startTime) * cooldownAttack4 / 1000 / journeyLenght1 / 4 * 3);
 
-						/*
-						if (leftSphere.transform.position.x < endPositionState1.x)
-						{
-							xVectorLeft = 0.1f;
-						}
-						if (leftSphere.transform.position.y < endPositionState1.y)
-						{
-							yVectorLeft = 0.1f;
-						}
-						if (rightSphere.transform.position.x < endPositionState1.x)
-						{
-							xVectorRight = 0.1f;
-						}
-						if (rightSphere.transform.position.y < endPositionState1.y)
-						{
-							yVectorRight = 0.1f;
-						}
+	//					/*
+	//					if (leftSphere.transform.position.x < endPositionState1.x)
+	//					{
+	//						xVectorLeft = 0.1f;
+	//					}
+	//					if (leftSphere.transform.position.y < endPositionState1.y)
+	//					{
+	//						yVectorLeft = 0.1f;
+	//					}
+	//					if (rightSphere.transform.position.x < endPositionState1.x)
+	//					{
+	//						xVectorRight = 0.1f;
+	//					}
+	//					if (rightSphere.transform.position.y < endPositionState1.y)
+	//					{
+	//						yVectorRight = 0.1f;
+	//					}
 
-						leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
-						rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
-						if (Vector3.Distance(leftSphere.transform.position, endPositionState2Left) <= 0.05 && Vector3.Distance(rightSphere.transform.position, endPositionState2Right) <= 0.05)
-						{
-							stateAttack4 = 0;
-						}
+	//					leftSphere.transform.position = new Vector3(xVectorLeft, yVectorLeft)+leftSphere.transform.position;
+	//					rightSphere.transform.position = new Vector3(xVectorRight, yVectorRight) + rightSphere.transform.position;*/
+	//					if (Vector3.Distance(leftSphere.transform.position, endPositionState2Left) <= 0.05 && Vector3.Distance(rightSphere.transform.position, endPositionState2Right) <= 0.05)
+	//					{
+	//						stateAttack4 = 0;
+	//					}
 
-						break;
-				}
+	//					break;
+	//			}
 
-			}
-		}
+	//		}
+	//	}
 
-	}
+	//}
 
 
 }

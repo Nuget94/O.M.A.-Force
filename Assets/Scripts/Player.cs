@@ -38,18 +38,9 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKey ("left")) {
-			if (this.gameObject.transform.position.x >= -6.3f) {
-				//grannyTransform.Translate(new Vector3(-0.1f, 0, 0));
-				this.gameObject.transform.Translate (new Vector3 (-0.1f, 0, 0));
-				granny.GetComponent<Animator> ().SetInteger ("State", 2);
-			}
-		} else if (Input.GetKey ("right")) {
-			if (this.gameObject.transform.position.x <= 7.5f) {
-				//grannyTransform.Translate(new Vector3(0.1f, 0, 0));
-				this.gameObject.transform.Translate (new Vector3 (0.1f, 0, 0));
-				granny.GetComponent<Animator> ().SetInteger ("State", 2);
-			}
+		if (Input.GetAxisRaw("Horizontal") != 0) {
+			float direction = Input.GetAxisRaw("Horizontal") / 10;
+			this.gameObject.transform.Translate (new Vector3 (direction, 0, 0));
 		} else {
 			//granny.GetComponent<Animator> ().SetInteger ("State", 0);
 		}

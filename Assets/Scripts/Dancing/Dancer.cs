@@ -157,19 +157,19 @@ public class Dancer : MonoBehaviour
     {
         if (!isDead)
         {
+            FindObjectOfType<Scoring>().guestKnockedOut();
             gameObject.GetComponent<Turner>().stopTurn(true);
             isDead = true;
-            if (UnityEngine.Random.value < voiceChance / 100.0f && !FindObjectOfType<GrannyController>().angryVoices.isPlaying)
-            {
-                FindObjectOfType<GrannyController>().happyVoices.playRandom();
-            }
-            FindObjectOfType<Scoring>().guestLeft();
 
-            
             walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);
             this.GetComponent<Rigidbody2D>().angularDrag = 0;
             GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);
             spriteAnim.SetInteger("State", 2);
+
+            if (UnityEngine.Random.value < voiceChance / 100.0f && !FindObjectOfType<GrannyController>().angryVoices.isPlaying)
+            {
+                FindObjectOfType<GrannyController>().happyVoices.playRandom();
+            }
         }
     }
 

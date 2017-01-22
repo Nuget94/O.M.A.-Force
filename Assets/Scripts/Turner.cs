@@ -29,6 +29,7 @@ public class Turner : MonoBehaviour
         {
             sprite.transform.localRotation = Quaternion.Euler(new Vector3(0f, rotation * 180f, 0f));
             turnAround = null;
+			TurnDone(rotationTarget > 0.5f);
         }
         else
         {
@@ -59,6 +60,11 @@ public class Turner : MonoBehaviour
             sprite.transform.localRotation = Quaternion.AngleAxis(rotationTarget * 180f, Vector3.up);
         }
     }
+
+	virtual public void TurnDone(bool lookRight)
+	{
+
+	}
 
     public void checkFacingDirection()
     {

@@ -24,18 +24,21 @@ public class MoveDecoration : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    if (time < Time.realtimeSinceStartup)
-	    {
-            SetTime();
-	        Rigidbody2D[] bodies = GetComponentsInChildren<Rigidbody2D>();
-	        foreach (Rigidbody2D body in bodies)
-	        {
-	            int rndmSideJumpForce = rndm.Next(0, sideJumpForce * 2) - sideJumpForce;
-                body.angularVelocity = rndm.Next(0, jumpAngle * 2) - jumpAngle;
-                body.AddForce(new Vector2(rndmSideJumpForce, jumpForce));
-            }
-            
-	    }
+		if (FindObjectOfType<GameController>().IsRunning())
+		{
+			if (time < Time.realtimeSinceStartup)
+			{
+				SetTime();
+				Rigidbody2D[] bodies = GetComponentsInChildren<Rigidbody2D>();
+				foreach (Rigidbody2D body in bodies)
+				{
+					int rndmSideJumpForce = rndm.Next(0, sideJumpForce * 2) - sideJumpForce;
+					body.angularVelocity = rndm.Next(0, jumpAngle * 2) - jumpAngle;
+					body.AddForce(new Vector2(rndmSideJumpForce, jumpForce));
+				}
+
+			}
+		}
 
 	}
 

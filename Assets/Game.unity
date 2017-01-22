@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459005784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7070b3c5c63e57247b0f90cf851fd4c6, type: 3}
   m_Name: 
@@ -3482,7 +3482,7 @@ GameObject:
   - component: {fileID: 505669941}
   m_Layer: 9
   m_Name: Explosive
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6402,7 +6402,7 @@ GameObject:
   - component: {fileID: 851556469}
   m_Layer: 9
   m_Name: Stomp
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8395,7 +8395,7 @@ GameObject:
   - component: {fileID: 1080044049}
   m_Layer: 9
   m_Name: True Wave
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10619,7 +10619,7 @@ GameObject:
   - component: {fileID: 1485445737}
   m_Layer: 9
   m_Name: Wave
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

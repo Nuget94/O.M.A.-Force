@@ -97,7 +97,6 @@ public class Walker : MonoBehaviour
     public void exitComplete()
     {
         Destroy(gameObject);
-        FindObjectOfType<Scoring>().guestLeft();
     }
 
     public void enterComplete()

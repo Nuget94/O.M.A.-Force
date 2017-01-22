@@ -163,6 +163,7 @@ public class Dancer : MonoBehaviour
             {
                 FindObjectOfType<GrannyController>().happyVoices.playRandom();
             }
+            FindObjectOfType<Scoring>().guestLeft();
 
             
             walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);

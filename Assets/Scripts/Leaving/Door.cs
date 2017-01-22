@@ -30,12 +30,16 @@ public class Door : MonoBehaviour
         {
             var doorSprite = gameObject.GetComponentInChildren<SpriteRenderer>();
             doorSprite.enabled = true;
+            gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+
             doorIsOpen = true;
         }
         else if (!doorHastoBeOpen && doorIsOpen)
         {
             var doorSprite = gameObject.GetComponentInChildren<SpriteRenderer>();
             doorSprite.enabled = false;
+            gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+
             doorIsOpen = false;
         }
     }

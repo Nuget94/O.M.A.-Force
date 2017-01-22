@@ -3415,7 +3415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96416302d7902024694215767b74cb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   gameDuration: 300
+=======
+  gameDuration: 100
+>>>>>>> Stashed changes
   gameTimeText: {fileID: 821205844}
 --- !u!4 &459005786
 Transform:

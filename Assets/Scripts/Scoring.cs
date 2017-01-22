@@ -19,8 +19,10 @@ public class Scoring : MonoBehaviour
 		FindObjectOfType<PlayerScorePersistenceManager>().Score.AddScore(scoreForLeavingGuest);
 
 		gameObject.GetComponent<Text>().text = "Score: " + FindObjectOfType<PlayerScorePersistenceManager>().Score.Score;
+        gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
 
-		GameObject player = GameObject.Find("Player");
+
+        GameObject player = GameObject.Find("Player");
 		GameObject uiCanvas = GameObject.Find("UI Canvas");
 		RectTransform uiTransform = uiCanvas.GetComponent<RectTransform>();
 		Vector3 playerViewport = Camera.current.WorldToViewportPoint(player.transform.position - Vector3.down * -1.9f);

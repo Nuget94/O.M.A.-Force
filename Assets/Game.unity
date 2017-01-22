@@ -1201,6 +1201,48 @@ BoxCollider2D:
   m_Offset: {x: -0.0000009536743, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.005, y: 1.005}
+--- !u!1001 &131931787
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2046116876}
+    m_Modifications:
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.542408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.2121121
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+      propertyPath: m_RootOrder
+      value: 46
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 80ba8082b96dc894eab319b781d52cfd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &136024960
 GameObject:
   m_ObjectHideFlags: 0
@@ -17189,6 +17231,7 @@ Transform:
   - {fileID: 1231519810}
   - {fileID: 249851597}
   - {fileID: 679028065}
+  - {fileID: 2135553407}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18738,6 +18781,11 @@ BoxCollider2D:
   m_Offset: {x: -0.0000009536743, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.005, y: 1.005}
+--- !u!4 &2135553407 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4599935309643404, guid: 80ba8082b96dc894eab319b781d52cfd,
+    type: 2}
+  m_PrefabInternal: {fileID: 131931787}
 --- !u!1 &2141117180
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,17 +16,12 @@ public class InterpolatingLight : MonoBehaviour {
     private int currentColorIdx = 0;
     private int newColorIdx = 1;
 
-	// Use this for initialization
-	void Start () {
-		nextColor();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        nextColor();
+    }
 
-    void nextColor()
+    public virtual void nextColor()
     {
         isIdling = false;
         transitionStartTime = Time.fixedTime;
@@ -37,12 +32,10 @@ public class InterpolatingLight : MonoBehaviour {
             randomColorIdx = Random.Range(0, AvailableColors.Count);
         }
         newColorIdx = randomColorIdx;
-        Debug.Log("next colot is " + newColorIdx);
     }
 
     void FixedUpdate()
     {
-        var renderer = gameObject.GetComponent<SpriteRenderer>();
         var percentage = (Time.fixedTime - transitionStartTime) / transitionDuration;
         if (percentage > 1)
         {
@@ -50,16 +43,19 @@ public class InterpolatingLight : MonoBehaviour {
             {
                 nextColor();
             }
-            else if(!isIdling)
+            else if (!isIdling)
             {
-                Debug.Log("is idling = true");
                 idlingSince = Time.fixedTime;
                 isIdling = true;
             }
         }
         else
         {
-            renderer.color = Color.Lerp(AvailableColors[currentColorIdx], AvailableColors[newColorIdx], percentage);
+            SpriteRenderer[] renderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+            foreach (var renderer in renderers)
+            {
+                renderer.color = Color.Lerp(AvailableColors[currentColorIdx], AvailableColors[newColorIdx], percentage);
+            }
         }
     }
 }

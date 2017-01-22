@@ -2,15 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lichterkette : MonoBehaviour {
+public class Lichterkette : InterpolatingLight
+{
+    public List<Sprite> lights = new List<Sprite>();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private int lightIdx = 0;
+
+    public override void nextColor()
+    {
+        nextLight();
+        base.nextColor();
+    }
+
+    void nextLight()
+    {
+        lightIdx++;
+        if (lightIdx >= lights.Count)
+        {
+            lightIdx -= lights.Count;
+        }
+        GetComponent<SpriteRenderer>().sprite = lights[lightIdx];
+    }
 }

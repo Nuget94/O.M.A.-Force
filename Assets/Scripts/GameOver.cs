@@ -37,6 +37,11 @@ public class GameOver : MonoBehaviour {
 					Destroy(taggedObject);
 				}
 
+				foreach (GameObject taggedObject in GameObject.FindGameObjectsWithTag("Attack"))
+				{
+					Destroy(taggedObject);
+				}
+
 				foreach (MoveDecoration moveDecoration in GameObject.FindObjectsOfType<MoveDecoration>())
 				{
 					moveDecoration.enabled = false;
@@ -45,6 +50,8 @@ public class GameOver : MonoBehaviour {
 				GameObject.Find("granny").GetComponent<Animator>().SetInteger("State", 0);
 
 				FindObjectOfType<GameController>().GameOver();
+
+				FindObjectOfType<PartyGuestController>().SpawnCredits();
 			}
 			else
 			{

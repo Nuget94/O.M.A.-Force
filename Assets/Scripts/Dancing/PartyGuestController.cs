@@ -69,7 +69,33 @@ public class PartyGuestController : MonoBehaviour
 
 	public void SpawnCredits()
 	{
+		var newDancer1 = Instantiate(PrefabDancers[2], transform);
+		newDancer1.transform.position = new Vector3(-5.3f, -3.6f, -1);
+		newDancer1.GetComponent<Dancer>().enabled = false;
 
+		var newDancer2 = Instantiate(PrefabDancers[1], transform);
+		newDancer2.transform.position = new Vector3(-2.9f, -3.6f, -1);
+		newDancer2.GetComponent<Dancer>().enabled = false;
+
+		var newDancer3 = Instantiate(PrefabDancers[0], transform);
+		newDancer3.transform.position = new Vector3(-0.6f, -3.6f, -1);
+		newDancer3.GetComponent<Dancer>().enabled = false;
+
+		var newDancer4 = Instantiate(PrefabDancers[1], transform);
+		newDancer4.transform.position = new Vector3(1.7f, -3.6f, -1);
+		newDancer4.GetComponent<Dancer>().enabled = false;
+
+		var newDancer5 = Instantiate(PrefabDancers[0], transform);
+		newDancer5.transform.position = new Vector3(4f, -3.6f, -1);
+		newDancer5.GetComponent<Dancer>().enabled = false;
+
+		var newDancer6 = Instantiate(PrefabDancers[1], transform);
+		newDancer6.transform.position = new Vector3(6.3f, -3.6f, -1);
+		newDancer6.GetComponent<Dancer>().enabled = false;
+
+		var newDancer7 = Instantiate(PrefabDancers[0], transform);
+		newDancer7.transform.position = new Vector3(8.6f, -3.6f, -1);
+		newDancer7.GetComponent<Dancer>().enabled = false;
 	}
 
 	public void InitializeWithRandomDanceMove(Dancer dancer)

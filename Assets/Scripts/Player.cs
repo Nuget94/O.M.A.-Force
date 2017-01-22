@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             attackNumber = 3;
         }
 
-        if (Input.GetKey("space"))
+        if (Input.GetButton("Fire1"))
         {
             if (this.gameObject.transform.position.y <= -1.0f && timeWait < Time.realtimeSinceStartup)
             {

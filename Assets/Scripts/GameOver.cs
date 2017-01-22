@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
 
 	public float gameDuration = 180;
+    public GameObject gameTimeText;
 
 	private float startTime;
 
@@ -16,9 +17,13 @@ public class GameOver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.realtimeSinceStartup > startTime + gameDuration)
-		{
-			SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-		}
+	    if (Time.realtimeSinceStartup > startTime + gameDuration)
+	    {
+	        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+	    }
+	    else
+	    {
+	        gameTimeText.GetComponent<GameTime>().UpdateTime(gameDuration + startTime -Time.realtimeSinceStartup);
+	    }
 	}
 }

@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976142975851146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.209911, y: -2.569, z: 0}
+  m_LocalPosition: {x: -11.836351, y: -0.26084208, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4108725686451060}
@@ -128,9 +128,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.08, y: -0.82}
+  m_Offset: {x: -0.08, y: -0.7}
   serializedVersion: 2
-  m_Size: {x: 0.87, y: 1.22}
+  m_Size: {x: 0.87, y: 1.5}
 --- !u!95 &95736887386209842
 Animator:
   serializedVersion: 3
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLeaving: 1
   walkingSpeed: 4
+  walkingHeight: 1.6
   WayPointsLeave:
   - {fileID: 1294825274433956, guid: 2bc45fc378781664b9170648bc82517b, type: 2}
   - {fileID: 1661144848243412, guid: b93cbe45d580e874db530c8fb8ba9d2d, type: 2}
@@ -196,8 +197,6 @@ MonoBehaviour:
         type: 2}
   minDelayBeforeWalkOut: 1.5
   maxDelayBeforeWalkOut: 3.7
-  jumpInterval: 1000
-  jumpForce: 1000
   maxAngle: 70
   isDead: 0
   centerOfMass: {x: 0, y: -0.25}

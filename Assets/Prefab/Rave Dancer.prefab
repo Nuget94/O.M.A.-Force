@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114705855755370120}
   m_Layer: 10
   m_Name: Rave Dancer
-  m_TagString: Untagged
+  m_TagString: Party Guest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   maxAngle: 70
   isDead: 0
   centerOfMass: {x: 0, y: -0.25}
+  voiceChance: 30
 --- !u!114 &114705855755370120
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -33,6 +33,11 @@ public class GameController : MonoBehaviour {
 		FindObjectOfType<PartyGuestController>().SpawnInitial();
 	}
 
+	public void GameOver()
+	{
+		gameState = "gameover";
+	}
+
 	public bool IsRunning()
 	{
 		return gameState == "running";

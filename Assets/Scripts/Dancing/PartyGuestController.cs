@@ -67,6 +67,11 @@ public class PartyGuestController : MonoBehaviour
 		}
 	}
 
+	public void SpawnCredits()
+	{
+
+	}
+
 	public void InitializeWithRandomDanceMove(Dancer dancer)
 	{
 		int danceType = Random.Range(0, AvailableMoves.Count);

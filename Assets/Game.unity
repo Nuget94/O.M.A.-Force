@@ -10454,11 +10454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: f361109057c8495468658f6851d340a2, type: 3}
+  - {fileID: 8300000, guid: f91fd5e4574ceab4daa78243dc29de1f, type: 3}
+  - {fileID: 8300000, guid: 280415b98dfebad448a682cc515d5ec1, type: 3}
+  - {fileID: 8300000, guid: a342f71e790d10645b54860dc2159c4c, type: 3}
+  - {fileID: 8300000, guid: 2200378766c802b48830bfca219a3b0a, type: 3}
   isPlaying: 0
 --- !u!1 &1334065555
 GameObject:
@@ -15748,10 +15748,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 583a9f84480d9894ea66e628cfc2bd8c, type: 3}
+  - {fileID: 8300000, guid: 0189c6f6cf2443143a0e1d58653d14e7, type: 3}
+  - {fileID: 8300000, guid: 2eb2b9860619cfc40aff9b2111fa4276, type: 3}
+  - {fileID: 8300000, guid: 42cb07d4571eb3d42819e3b7475f4b5d, type: 3}
   isPlaying: 0
 --- !u!82 &2046908832
 AudioSource:

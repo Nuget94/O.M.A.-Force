@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 	public float cooldownAttack3 = 1000;
 	public float cooldownAttack4 = 1000;
 	public GrannyController granny;
-	public int attackNumber = 0;
+	public int attackNumber = 2;
 	public Transform grannyTransform;
 
 	private bool startAttack4 = false;
@@ -66,10 +66,10 @@ public class Player : MonoBehaviour
 			{
 				attackNumber = 2;
 			}
-			if (Input.GetKey("4"))
-			{
-				attackNumber = 3;
-			}
+			//if (Input.GetKey("4"))
+			//{
+			//	attackNumber = 3;
+			//}
 
 			if (Input.GetButton("Fire1") && !Input.GetButton("Horizontal"))
 			{

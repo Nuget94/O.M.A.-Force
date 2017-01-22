@@ -18,6 +18,7 @@ public class StartGame : MonoBehaviour {
 
 	void OnClick()
 	{
+		GameObject.FindObjectOfType<PlayerScorePersistenceManager>().Score.Reset();
 		SceneManager.LoadScene("Game", LoadSceneMode.Single);
 		gameObject.GetComponentInChildren<Text>().color = Color.white;
 	}

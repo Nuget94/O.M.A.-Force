@@ -448,11 +448,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4179574862511212, guid: f2d8c9408de69a849b1612343700a861, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.48
+      value: -13.57
       objectReference: {fileID: 0}
     - target: {fileID: 4179574862511212, guid: f2d8c9408de69a849b1612343700a861, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4179574862511212, guid: f2d8c9408de69a849b1612343700a861, type: 2}
       propertyPath: m_LocalPosition.z
@@ -481,6 +481,10 @@ Prefab:
     - target: {fileID: 4179574862511212, guid: f2d8c9408de69a849b1612343700a861, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.5281514
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179574862511212, guid: f2d8c9408de69a849b1612343700a861, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 7.746856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2d8c9408de69a849b1612343700a861, type: 2}
@@ -6023,7 +6027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf0dd56aaf977243beb82f5c1f9ecbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceAttack1: 40000
+  forceAttack1: 70000
   forceAttack2: 40000
   forceAttack3: 40000
   forceAttack4: 10000
@@ -6032,7 +6036,7 @@ MonoBehaviour:
   cooldownAttack3: 1000
   cooldownAttack4: 5000
   granny: {fileID: 1784304523}
-  attackNumber: 0
+  attackNumber: 2
   grannyTransform: {fileID: 153778027}
   endPositionState1: {x: 0, y: 0, z: 0}
   endPositionState2Left: {x: 0, y: 0, z: 0}
@@ -6946,6 +6950,10 @@ Prefab:
     - target: {fileID: 4621333811828180, guid: bdef7fd620afaaf49a0fcb94636cda02, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719095288497074, guid: bdef7fd620afaaf49a0fcb94636cda02, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdef7fd620afaaf49a0fcb94636cda02, type: 2}
@@ -9558,7 +9566,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1105490080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.17, y: 3.44, z: 0}
+  m_LocalPosition: {x: -14.15, y: 3.44, z: 0}
   m_LocalScale: {x: 0.3, y: 15.314062, z: 1}
   m_Children: []
   m_Father: {fileID: 2119900317}

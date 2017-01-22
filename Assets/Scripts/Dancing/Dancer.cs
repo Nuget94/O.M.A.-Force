@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 
 [System.Serializable]
 public class DanceMoveAndTime
@@ -73,6 +75,7 @@ public class Dancer : MonoBehaviour
     private float walkOutTime = 0.0f;
 	private Animator spriteAnim;
     private float leftGroundAt;
+    private float lastX = 10000.0f; // some value of to the far right, so dancers face right initially
 
     public float maxAngle = 45;
     public bool isDead = false;
@@ -153,6 +156,7 @@ public class Dancer : MonoBehaviour
     {
         if (!isDead)
         {
+            stopTurn(true);
             isDead = true;
             FindObjectOfType<GrannyController>().happyVoices.playRandom();
             walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);
@@ -192,6 +196,78 @@ public class Dancer : MonoBehaviour
         //    Destroy(gameObject);
             //FindObjectOfType<Scoring>().guestStuck();
         }
+
+        checkFacingDirection();
+    }
+
+    private Coroutine turnAround = null;
+    private float rotationTarget = 0.0f;
+
+    // rotation 0 means facing left, rotation 1 means facing right
+    IEnumerator TurnToRotationY(float rotation)
+    {
+        float rotationStep = 20f;
+        float timeStep = 0.006f;
+        var sprite = GetComponentInChildren<SpriteRenderer>();
+        rotationTarget = rotation;
+        var ownRotation = sprite.transform.rotation.eulerAngles.y;
+        if (ownRotation < 0.0f 
+            || FloatComparer.AreEqual(ownRotation, rotation * 180f, rotationStep * 1.001f))
+        {
+            sprite.transform.localRotation = Quaternion.Euler(new Vector3(0f, rotation * 180f, 0f));
+            turnAround = null;     
+        }
+        else
+        {
+            if (rotation < 0.5f)
+            {
+                // rotate towards 0
+                sprite.transform.Rotate(Vector3.up, -5f, Space.Self);
+            }
+            else
+            {
+                // rotate towards 1
+                sprite.transform.Rotate(Vector3.up, 5f, Space.Self);
+            }           
+            yield return new WaitForSeconds(timeStep);
+            turnAround = StartCoroutine(TurnToRotationY(rotation));
+        }
+    }
+
+    private void stopTurn(Boolean setToRotationTarget)
+    {
+        if (turnAround != null)
+        {
+            StopCoroutine(turnAround);
+        }
+        if (setToRotationTarget)
+        {
+            var sprite = GetComponentInChildren<SpriteRenderer>();
+            sprite.transform.localRotation = Quaternion.AngleAxis(rotationTarget * 180f, Vector3.up);
+        }
+    }
+
+    private void checkFacingDirection()
+    {
+        var walker = gameObject.GetComponent<Walker>();
+        if (isDead && !walker.isActiveAndEnabled)
+        {
+            return;
+        }
+
+        var diff = transform.position.x - lastX;
+        var threshold = 0.003f;
+        if (diff > threshold && rotationTarget < 0.5f)
+        {
+            stopTurn(false);
+            turnAround = StartCoroutine(TurnToRotationY(1.0f));
+        }
+        else if(diff < -threshold && rotationTarget > 0.5f)
+        {
+            stopTurn(false);
+            turnAround = StartCoroutine(TurnToRotationY(0.0f));
+        }
+        lastX = transform.position.x;
     }
 
     private void checkWalkout()

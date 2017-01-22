@@ -47,6 +47,7 @@ public class PartyGuestController : MonoBehaviour
         walker.reset(false);
         walker.enabled = true;
         newDancer.transform.position = externalSpawnPoint.transform.position + Vector3.up * walker.walkingHeight;
+        newDancer.GetComponentInChildren<SpriteRenderer>().transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
     }
 
 	// Use this for initialization

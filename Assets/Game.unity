@@ -2534,38 +2534,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1330492141881876, guid: 3dd332668cf109f408e82fb87c017f39, type: 2}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858005288917330, guid: 3dd332668cf109f408e82fb87c017f39, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.151
-      objectReference: {fileID: 0}
-    - target: {fileID: 212617793575388318, guid: 3dd332668cf109f408e82fb87c017f39,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212617793575388318, guid: 3dd332668cf109f408e82fb87c017f39,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212617793575388318, guid: 3dd332668cf109f408e82fb87c017f39,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212617793575388318, guid: 3dd332668cf109f408e82fb87c017f39,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858005288917330, guid: 3dd332668cf109f408e82fb87c017f39, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.45
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd332668cf109f408e82fb87c017f39, type: 2}
   m_IsPrefabParent: 0
@@ -10143,7 +10111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 6d60f3afbccc56e43a92b68b25749336, type: 3}
+  - {fileID: 8300000, guid: 178b2c16c21654c4fb2b29143637a328, type: 3}
   - {fileID: 8300000, guid: bd655dea5fcc41c45b2b45c8dea6b523, type: 3}
   - {fileID: 8300000, guid: 05cc4aeb85cbc9e408e849ca9da7d4df, type: 3}
   - {fileID: 8300000, guid: 2e6e3cebec62f5f4988d257b65645c1a, type: 3}
@@ -15665,7 +15633,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 3163caa373b16cd48be8c7f20c8b06df, type: 3}
   - {fileID: 8300000, guid: 39cd1d3ca27f20a42b9c198c45e1d8bc, type: 3}
-  - {fileID: 8300000, guid: 178b2c16c21654c4fb2b29143637a328, type: 3}
+  - {fileID: 8300000, guid: 6d60f3afbccc56e43a92b68b25749336, type: 3}
   - {fileID: 8300000, guid: e28655b2ee5c5054da03227524944b72, type: 3}
   isPlaying: 0
 --- !u!82 &2046908832
@@ -15735,7 +15703,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

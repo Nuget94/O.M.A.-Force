@@ -19,10 +19,10 @@ public class GrannyController : MonoBehaviour
 
 	public void Attack()
     {
-        Debug.Log("Attack start");
-        if (Random.value < voiceChance / 100)
+        gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
+
+        if (Random.value < voiceChance / 100.0f && !happyVoices.isPlaying)
         {
-            gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
             angryVoices.playRandom();
         }
         

@@ -80,7 +80,8 @@ public class Dancer : MonoBehaviour
     public float maxAngle = 45;
     public bool isDead = false;
     public Vector2 centerOfMass = new Vector2(0, 0f);
-    
+    public int voiceChance = 30;
+
     // Use this for initialization
     void Start ()
     {
@@ -158,7 +159,12 @@ public class Dancer : MonoBehaviour
         {
             gameObject.GetComponent<Turner>().stopTurn(true);
             isDead = true;
-            FindObjectOfType<GrannyController>().happyVoices.playRandom();
+            if (UnityEngine.Random.value < voiceChance / 100.0f && !FindObjectOfType<GrannyController>().angryVoices.isPlaying)
+            {
+                FindObjectOfType<GrannyController>().happyVoices.playRandom();
+            }
+
+            
             walkOutTime = Time.fixedTime + UnityEngine.Random.Range(minDelayBeforeWalkOut, maxDelayBeforeWalkOut);
             this.GetComponent<Rigidbody2D>().angularDrag = 0;
             GetComponent<Rigidbody2D>().centerOfMass = new Vector2(0, 0);

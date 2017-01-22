@@ -85,10 +85,7 @@ public class Player : MonoBehaviour
                         break;
                 }
             }
-            else
-            {
-                Debug.Log(timeWait-Time.realtimeSinceStartup);
-            }
+            
             
         }
         

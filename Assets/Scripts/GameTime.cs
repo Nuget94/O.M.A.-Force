@@ -20,7 +20,7 @@ public class GameTime : MonoBehaviour {
     public void UpdateTime(float leftTime)
     {
         string formatedGameTime = string.Format("{0}:{1:00}", (int)leftTime / 60, (int)leftTime % 60); 
-        gameObject.GetComponent<Text>().text = "Game Time Left: " + formatedGameTime;
+        gameObject.GetComponent<Text>().text = "Time  " + formatedGameTime;
     }
 
 }

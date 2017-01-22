@@ -18,7 +18,7 @@ public class Scoring : MonoBehaviour
     {
 		FindObjectOfType<PlayerScorePersistenceManager>().Score.AddScore(scoreForLeavingGuest);
 
-		gameObject.GetComponent<Text>().text = "Score: " + FindObjectOfType<PlayerScorePersistenceManager>().Score.Score;
+		gameObject.GetComponent<Text>().text = "Score  " + FindObjectOfType<PlayerScorePersistenceManager>().Score.Score;
         gameObject.GetComponent<AudioSource>().PlayDelayed(0.005f);
 
 

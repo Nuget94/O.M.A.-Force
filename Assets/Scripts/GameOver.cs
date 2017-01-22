@@ -9,10 +9,18 @@ public class GameOver : MonoBehaviour {
     public GameObject gameTimeText;
 
 	private float startTime;
+	private GameObject uiCanvas = null;
+	private GameObject gameOverCanvas = null;
 
 	// Use this for initialization
 	void Start () {
 		Reset();
+
+		uiCanvas = GameObject.Find("UI Canvas");
+		gameOverCanvas = GameObject.Find("Game Over Canvas");;
+
+		uiCanvas.SetActive(true);
+		gameOverCanvas.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -21,7 +29,22 @@ public class GameOver : MonoBehaviour {
 		{
 			if (Time.realtimeSinceStartup > startTime + gameDuration)
 			{
-				SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+				uiCanvas.SetActive(false);
+				gameOverCanvas.SetActive(true);
+
+				foreach (GameObject taggedObject in GameObject.FindGameObjectsWithTag("Party Guest"))
+				{
+					Destroy(taggedObject);
+				}
+
+				foreach (MoveDecoration moveDecoration in GameObject.FindObjectsOfType<MoveDecoration>())
+				{
+					moveDecoration.enabled = false;
+				}
+
+				GameObject.Find("granny").GetComponent<Animator>().SetInteger("State", 0);
+
+				FindObjectOfType<GameController>().GameOver();
 			}
 			else
 			{

@@ -7,6 +7,7 @@ TagManager:
   - Ceiling
   - Dance Floor
   - Attack
+  - Party Guest
   layers:
   - Default
   - TransparentFX

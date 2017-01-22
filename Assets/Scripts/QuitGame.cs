@@ -18,6 +18,7 @@ public class QuitGame : MonoBehaviour {
 
 	void OnClick()
 	{
+		gameObject.GetComponentInChildren<Text>().color = Color.white;
 		Application.Quit();
 	}
 }

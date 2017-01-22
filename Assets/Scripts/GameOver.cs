@@ -48,6 +48,7 @@ public class GameOver : MonoBehaviour {
 				}
 
 				GameObject.Find("granny").GetComponent<Animator>().SetInteger("State", 0);
+				Destroy(GameObject.Find("granny"));
 
 				FindObjectOfType<GameController>().GameOver();
 

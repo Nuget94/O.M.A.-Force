@@ -19,5 +19,6 @@ public class StartGame : MonoBehaviour {
 	void OnClick()
 	{
 		SceneManager.LoadScene("Game", LoadSceneMode.Single);
+		gameObject.GetComponentInChildren<Text>().color = Color.white;
 	}
 }
